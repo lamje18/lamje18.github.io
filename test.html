@@ -7689,7 +7689,7 @@ jQuery(document).ready(function(){
 
 
 <div id="ajax-wait" class="hide">Traitement en cours...</div><div class="sidebar-backdrop fade sidebar-closer" data-jalios-target=".sidebar-component"></div><div class="printHide hidden-xs hidden-sm"><a href="https://www.natixis.com/natixis/jcms" class="top_link_lg" style="position: fixed; right: 17.5%; bottom: 20px; opacity: 0.7; z-index: 2000; display: block;" title="Top"><img src="plugins/RWDCorePlugin/images/arrow_top.png" alt=""></a></div><div class="printHide hidden-md hidden-lg"><a href="https://www.natixis.com/natixis/jcms" class="top_link_sm" title="Top" style="position: fixed; right: 10px; bottom: 20px; opacity: 0.7; z-index: 2000; display: none;"><img src="plugins/RWDCorePlugin/images/arrow_top.png" alt=""></a></div>
-<style type="text/css">
+<style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
 		background-color: #005290;
 		font-family: "Salesforce Sans", sans-serif;
@@ -7704,8 +7704,8 @@ jQuery(document).ready(function(){
 	}
 </style>
 
-<script type="text/javascript" src="https://service.force.com/embeddedservice/5.0/esw.min.js"></script>
-<script type="text/javascript">
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
@@ -7729,17 +7729,17 @@ jQuery(document).ready(function(){
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://jeanpaullam-dev-ed.my.salesforce.com',
-			'https://jeanpaullam-developer-edition.eu16.force.com/1',
+			'https://cunning-badger-81419-dev-ed.my.salesforce.com',
+			'https://testnatixis-developer-edition.eu12.force.com/liveAgentSetupFlow',
 			gslbBaseURL,
-			'00D1t000000GBGY',
-			'Chat_Deployment',
+			'00D1r000002CaNN',
+			'Chats_Agent',
 			{
-				baseLiveAgentContentURL: 'https://c.la1-c1-fra.salesforceliveagent.com/content',
-				deploymentId: '5721t000000PZMz',
-				buttonId: '5731t000000PapT',
-				baseLiveAgentURL: 'https://d.la1-c1-fra.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I1t000000GogsEAC_1689e5c86fe',
+				baseLiveAgentContentURL: 'https://c.la1-c2-par.salesforceliveagent.com/content',
+				deploymentId: '5721r000000H0zA',
+				buttonId: '5731r000000H1fM',
+				baseLiveAgentURL: 'https://d.la1-c2-par.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'Chats_Agent',
 				isOfflineSupportEnabled: false
 			}
 		);
@@ -7747,7 +7747,7 @@ jQuery(document).ready(function(){
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://jeanpaullam-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://cunning-badger-81419-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
