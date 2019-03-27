@@ -1,0 +1,759 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<html lang="fr">
+
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<title>Natixis Interépargne</title>
+	
+	<meta http-equiv='pragma' content='no-cache'/>
+	<meta http-equiv='expires' content='-1'/>
+	<meta http-equiv='cache-control' content='no-cache'/>
+	<meta name="DESCRIPTION" content="Natixis Interépargne, filiale de Natixis, Natixis Interépargne est le numéro un de l'épargne salariale en France">
+	<meta name="KEYWORDS" content="&eacute;pargne salariale, &eacute;pargne, Inter&eacute;pargne, Natixis, Groupe Natixis, Groupe Natexis Banques Populaires, Natexis, Banque Populaire, int&eacute;ressement, participation, compte &eacute;pargne temps, plan d'&eacute;pargne, Plan Epargne Long Terme (PELT), actionnariat salari&eacute;, plan d'&eacute;pargne retraite collectif (PERCO/PERCOI), PEE, PEI, ing&eacute;nierie sociale, Groupe Banque Populaire, Groupe Caisse d'Epargne, retraite, &eacute;pargne retraite, ISR">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script>
+		var anchor = window.location.hash.substr(1);
+		var params = anchor ? getParams(anchor) : {};
+		if ('expires_in' in params && 'access_token' in params) {
+			var dt = new Date();
+			dt.setSeconds(dt.getSeconds() + Number(params['expires_in']) - 60);
+			sessionStorage.setItem("Authorization", params['access_token']);
+			sessionStorage.setItem("Expires", dt);
+			sessionStorage.setItem("EmployeeId", "6125-54317");
+		} else {
+			var tokenValid = sessionStorage.getItem("Authorization") &&  sessionStorage.getItem("Expires") && new Date(sessionStorage.getItem("Expires")) > new Date();
+			var employeeValid = sessionStorage.getItem("EmployeeId") &&  sessionStorage.getItem("EmployeeId") == "6125-54317";
+			if (!tokenValid || !employeeValid) {
+			    var path = location.pathname.substring(0, location.pathname.lastIndexOf("/"));
+				var redirectUrl = encodeURIComponent( location.protocol + '//' + location.host + path + "/menu.do?dfAT=menu&dfMenuId=SC_EP_AC" );
+				window.location.replace("/def_int_ep/ep/saml.do?redirect_uri=" + redirectUrl);
+			}
+		}
+
+		function getParams(search) {
+			var finalParams = {};
+			var params = search.split('&');
+			params.forEach(function (param) {
+				var pairs = param.split('=');
+				if (pairs.length === 2 && pairs[0] != null && pairs[0].length > 0) {
+					finalParams[pairs[0]] = pairs[1];
+				} else if (pairs.length === 1 && pairs[0] != null && pairs[0].length > 0) {
+					finalParams[pairs[0]] = null;
+				}
+			});
+			return finalParams;
+		}
+	</script>
+
+	
+	 
+ 
+ 
+
+	 
+
+
+
+
+
+
+
+<link rel="icon" type="image/png" href="/def_int_ep/assets/img/common/favicon.png" />
+
+<link rel="stylesheet" href="/def_int_ep/assets/css/common/angular.min.css"/>
+<link rel="stylesheet" href="/front/styles.css"/>
+
+<script src="/def_int_ep/assets/js/newapp.min.js"></script>
+
+
+<script>
+    // Formatage des nombres
+    EP.Globals.decimalsSeparator = ",";
+    EP.Globals.thousandsSeparator = " ";
+    EP.Globals.euro = 'EUR';
+	$(document).ready(function() {
+		// Activation des tabs
+		EP.TabToggle.init();
+
+		// Messages dÃ©pliables
+		EP.InfoBox.init();
+
+		// Initialisation des popovers
+		EP.Popover.initListener($('.tooltipUl'));
+
+		// Initialisation des tooltips
+		$(document).tooltip({
+			selector: ".tooltip-info",
+			container: "body"
+		});
+		EP.tooltips.initTooltips();
+
+		EP.group_option.initGroupOption();
+
+		EP.header.initHeader();
+
+		EP.notification.initNotification();
+
+		EP.Input.initInputListeners();
+
+		EP.Input.initCrossInput();
+
+		EP.header.initHeaderSlider();
+
+		EP.swipe = EP.table.initSlider();
+
+        EP.data_picker.initDateTimePicker("fr");
+
+		EP.tabs.initTabs();
+	});
+</script>
+	
+
+	
+
+</head>
+
+<body class="nie-container">
+
+<section class="bootstrap-angular">
+
+
+<header class="header-nie">
+	<div class="header-nie-top col-12">
+		<div class="left">
+            
+            
+                <div class="burger collapsed material-icons" data-toggle="collapse" data-target="#menu" aria-expanded="false" aria-controls="menu"></div>
+                <a class="img-container" href="#" onclick="javascript:return EP.Navigation.DfmenuAction(document.forms.MainForm,'SC_EP_AC');">
+                    <img src="/def_int_ep/assets/img/logo/nie_newlogo.png" alt="Natixis-interepargne-logo">
+                </a>
+            
+		</div>
+		<div class="right">
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="img-container">
+	
+</div>
+
+<div class="profil">
+	<p>Votre site d'épargne salariale</p>
+	<div class="dropdown">
+		<button type="button" class="btn btn-primary" data-toggle="dropdown">
+			<i class="material-icons">account_circle</i>
+			<span class="button-texte">
+				<span>Épargnant</span>
+				<span>JEAN                 LAM                           </span>
+			</span>
+		</button>
+		<div class="dropdown-menu dropdown-menu-right">
+			<p>
+				
+					Dernière connexion le 
+					27/03/2019
+					à
+					13:42:22
+				
+			</p>
+		    
+			<a class="dropdown-item" href="menu.do?dfAT=menu&dfMenuId=SC_EP_AV_IDE" title="Voir vos informations personnelles">
+				Vos informations personnelles
+			</a>
+			<a class="dropdown-item logout" href="/def_int_ep/ep/deconnexion.do?dfAT=firstDisplay" title="Déconnexion">
+				<i class="material-icons">power_settings_new</i>
+				Déconnexion
+			</a>
+		</div>
+	</div>
+</div>
+			
+		</div>
+	</div>
+	
+	<div class="menu-container col-12">
+		<nav id="menu">
+			
+			
+
+
+
+
+
+
+
+
+<ul class="header-slider swiper-no-swiping">
+	<div class="swiper-wrapper">
+	    <li class="swiper-slide"><a class="link-primary" href="#" onclick="javascript:return EP.Navigation.DfmenuAction(document.forms.MainForm,'SC_EP_AC');"><i class="material-icons">home</i></a><li class="swiper-slide"><span>Votre épargne</span><div><ul class="col-xl-3"><li class="swiper-slide"><a href="menu.do?dfAT=menu&dfMenuId=SC_EP_AV_DET_NEW" class="menu-item-link"><div>Votre épargne en détail</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&dfMenuId=SC_EP_AV_ABD" class="menu-item-link"><div>Votre abondement</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&dfMenuId=SC_EP_ALERT_SOLD" class="menu-item-link"><div>Gérer mes alertes sur compte</div><i class="material-icons">notifications</i></a></li></ul><ul class="col-xl-3"><li class="swiper-slide"><a href="menu.do?dfAT=menu&dfMenuId=SC_EP_OP_GDS" class="menu-item-link"><div>Choix du mode de Gestion pilotée</div></a></li><li class="swiper-slide"><a target="_blank" href="menu.do?dfAT=menu&dfMenuId=SC_EP_AV_AMPLUS" class="menu-item-link"><div>Votre objectif retraite avec Amplus</div><i class="material-icons">exit_to_app</i></a></li></ul></div></li><li class="swiper-slide"><span>Fonds</span><div><ul class="col-xl-3"><li class="swiper-slide"><a href="menu.do?dfAT=menu&dfMenuId=SC_EP_FO_SFP" class="menu-item-link"><div>Synthèse des fonds proposés</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&dfMenuId=SC_EP_ALERT_VALO" class="menu-item-link"><div>Alertes sur fonds</div><i class="material-icons">notifications</i></a></li></ul></div></li><li class="swiper-slide"><span>Vos opérations</span><div><ul class="col-xl-3"><li><span>Opérations passées</span><i></i></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&dfMenuId=SC_EP_OP_HIS" class="menu-item-link"><div>Historique des opérations</div></a></li></ul><ul class="col-xl-3"><li><span>J'épargne</span><i></i></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&dfMenuId=SC_EP_OP_BO" class="menu-item-link"><div>Participation et intéressement</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&dfMenuId=SC_EP_OP_REPDSP" class="menu-item-link"><div>Réponse disponibilité</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&dfMenuId=SC_EP_OP_VLIB" class="menu-item-link"><div>Versements</div></a></li></ul><ul class="col-xl-3"><li><span>Je gère</span><i></i></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&dfMenuId=SC_EP_OP_DMDTRF" class="menu-item-link"><div>Arbitrage</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&dfMenuId=SC_EP_OP_DMDTAP" class="menu-item-link"><div>Transfert entre produits</div></a></li></ul><ul class="col-xl-3"><li><span>Je perçois</span><i></i></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&dfMenuId=SC_EP_OP_DMD_RMB" class="menu-item-link"><div>Remboursement</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&dfMenuId=SC_EP_GP_CDD" class="menu-item-link"><div>Cas de déblocage</div><i class="material-icons">description</i></a></li></ul></div></li><li class="swiper-slide"><span>Vos services</span><div><ul class="col-xl-3"><li class="swiper-slide"><a href="menu.do?dfAT=menu&dfMenuId=SC_EP_AV_IDE" class="menu-item-link"><div>Vos informations personnelles</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&dfMenuId=SC_EP_SV_REL" class="menu-item-link"><div>Vos relevés et documents en ligne</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&dfMenuId=SC_EP_OP_ESERV" class="menu-item-link"><div>Inscription aux relevés en ligne</div></a></li></ul><ul class="col-xl-3"><li class="swiper-slide"><a href="menu.do?dfAT=menu&dfMenuId=SC_EP_GP_DOC" class="menu-item-link"><div>Documentation</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&dfMenuId=SC_EP_GP_CMD_DOC" class="menu-item-link"><div>Commande de documents papier</div></a></li></ul><ul class="col-xl-3"><li class="swiper-slide"><a href="menu.do?dfAT=menu&dfMenuId=SC_EP_GP_SIM" class="menu-item-link"><div>Outils et simulateurs</div></a></li><li class="swiper-slide"><a href="#" onclick="window.open('https://www.interepargne.natixis.com/nie/epargnants/l-epargne-salariale-en-bref/l-epargne-salariale-en-video-jbm_659485.html','_blank')" class="menu-item-link"><div>Vidéos</div><i class="material-icons">exit_to_app</i></a></li></ul><ul class="col-xl-3"><li class="swiper-slide"><a href="#" onclick="window.open('https://www.interepargne.natixis.com/nie/epargnants/nos-actualites-mby_45741.html','_blank')" class="menu-item-link"><div>Actualités</div><i class="material-icons">exit_to_app</i></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&dfMenuId=SC_EP_GP_FAQ" class="menu-item-link"><div>Questions fréquentes</div></a></li></ul></div></li>
+	</div>
+</ul>
+
+			
+	<div id="ombre"></div>
+		</nav>
+		
+	</div>
+</header>
+
+
+	
+		
+			<main class="page-content container angular-home">
+		
+		
+	
+
+	
+	<form name="MainForm" method="post" action="/def_int_ep/ep/menu.do" target="">
+		<input type="hidden" name="dfAT" value="actionTypeHere">
+		<input type="hidden" name="dfMenuId" value="-1">
+	</form>
+
+
+	
+		
+
+
+	
+		
+
+
+	
+
+
+		
+
+		
+			<div class="content-wrapper">
+				<section class="col-12 container">
+		
+
+				
+				
+
+			</section>
+
+			
+	</div>
+
+</main>
+</section>
+
+	
+		
+			<section class="angular-wrapper angular-home">
+		
+		
+	
+	<section class="angular-content">
+		
+			
+			
+			
+			
+			
+			
+		
+
+
+
+
+
+
+
+
+
+
+<script>
+    window.addEventListener('message', function (event) {
+        var data = event != null ? event.data : null;
+        var eventData = data != null ? data.data : null;
+        if (eventData != null && event.origin === document.location.origin &&
+            data.apiKey === 'f58ec1d6-af51-4be2-acab-dbf9b0636069') {
+            if (data.type === 'SELECT_FUND') {
+                EP.Modal.loadPageForPopupWithScript('/def_int_ep/ep/popup/fo/sfp.do?dfAT=detail&dfMenuId=' + eventData._id,
+                    eventData._title, '#popupDetailFond', '#popupModalBootstrap', true);
+            }
+        }
+    }, false);
+
+</script>
+
+<app-root page="dashboard" i18n='["common", "saving", "dashboard", "distribution", "transaction"]' lang="fr" theme="natixis" params='{"employeeId":"6125-54317"}'></app-root>
+
+
+	</section>
+</section>
+
+<section class="bootstrap-angular">
+
+
+
+	
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+	if(EP.cobrowse) {
+		EP.cobrowse.helpVars = {showAVI: true, showTempoz: false, showChat: true, sContextualisation: 'NC;ABD;INT;PEE;PERCO;RSP;PEE+PERCO;INT+RSP;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;VCB;VV;VVC;VV;VVP;VV;VVS;VV;FG;FG', numPort: '0628659164'};
+	}
+</script>
+
+
+
+<form name="AcFormChat" method="post" action="/def_int_ep/ep/ac/chat.do" class="forms" id="EpChatForm" target="">
+	<input type="hidden" name="dfAT" value="actionTypeHere">
+	<input type="hidden" name="dfMenuId" value="-1">
+	<input type="hidden" name="cmd" value="">
+	<input type="hidden" name="message" value="">
+	<input type="hidden" name="epargnant" value="">
+
+	<div class="modal" id="modalChat" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-toggle="modal" data-target=".bs-example-modal-sm">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" style="text-align: center">
+						<img src="/def_int_ep/assets/img/chat/chat.png" />
+						Chat
+					</h4>
+				</div>
+				<div class="modal-body">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12">
+								<div>
+									<div id="transcript" name="transcript" class="transcript text-left"></div>
+								</div>
+								<div class="typing">
+									<textarea id="typing" class="text-typing" rows=5 cols=80 wrap=on readonly></textarea>
+								</div>
+								<div>
+									<textarea id="messages"  name="messages" style="resize: none; width: 100%;" onkeypress="javascript:EP.NeedInfo.Chat.messageOnKeypress(event);"></textarea>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default goModalSimuAbd" onclick="javascript:EP.NeedInfo.Chat.send();" id="button-envoyer">
+										Envoyer
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+				
+		</div>
+			
+	</div>
+	
+	<div id="modal-sm" class="bs-example-modal-sm modal fade" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"><i class="fa fa-remove"></i></span>
+					</button>
+
+				</div>
+				<div class="modal-body">
+					Vous êtes sur le point d'interrompre la conversation avec le conseiller. 
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-grey" data-dismiss="modal">
+						Non
+					</button>
+					<a class="btn btn-default" href="#" onclick="javascript:EP.NeedInfo.Chat.disconnect()"> <span>Oui</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+		
+		<div id="binfo">
+			<div class="canvas-container ">
+				<div class="open-close-container">
+					<div class="button-help open-close" id="needInfoButton" onclick="javascript:EP.NeedInfo.Menu.openMenu(true, false, true, 'NC;ABD;INT;PEE;PERCO;RSP;PEE+PERCO;INT+RSP;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;VCB;VV;VVC;VV;VVP;VV;VVS;VV;FG;FG', '0628659164');"
+						 data-toggle="tooltip" data-placement="left" title="Besoin d'infos" data-original-title="">
+					</div>
+
+					<div class="mobile-close-button" onclick="javascript:EP.NeedInfo.Menu.mobileClose();">
+						<h2>X FERMER</h2>
+					</div>
+
+				</div>
+
+				<div class="canvas-box" id="canvas-box" >
+					<div class="panel-group" id="accordion-needinfo" role="tablist" aria-multiselectable="true" >
+
+							
+						
+						<div class="panel panel-default panel-bi">
+							<a id="a1" class="collapsed a-collapsed" data-toggle="collapse" data-parent="#accordion-needinfo" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								<i class="fa fa-chevron-down fa-bi-down"></i>
+								<div class="panel-heading active-panel" role="tab" id="headingOne">
+									<h2 class="panel-title">
+										Votre assistant	virtuel
+									</h2>
+								</div>
+							</a>
+							<div id="collapseOne" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne">
+								<div class="panel-body div-avi" id="dviAvi"  ></div>
+							</div>
+						</div>
+						
+
+							
+						
+
+							
+						
+						<div class="panel panel-default panel-bi"   id="open-chat">
+							<a class="collapsed a-collapsed" data-toggle="collapse" data-parent="#accordion-needinfo" aria-expanded="false" href="#collapseThree"
+							   onclick="javascript:EP.NeedInfo.Chat.verifierChat();">
+								<i class="fa fa-chevron-right fa-bi-right"></i>
+								<div class="panel-heading" role="tab" id="headingThree" >
+									<h2 class="panel-title">
+										Chat
+									</h2>
+								</div>
+							</a>
+							<div id="collapseThree" class="panel-collapse collapse box"  role="tabpanel" aria-labelledby="headingThree" style="text-align: center;   margin-bottom: 0px">
+								<h6 id="chat_non_dispo">Chat actuellement indisponible </h6>
+								<h6 id="chat_dispo" style="display: none;">Pour contacter un conseiller par Chat, veuillez cliquez sur le bouton ci-dessous:</h6>
+								
+									<button type="button" class="btn btn-default" onclick="javascript:EP.NeedInfo.Chat.connect();" id="button-chat" disabled="false">
+										Je démarre un chat
+									</button>
+								
+							</div>
+						</div>
+						
+						<div class="panel panel-default panel-bi">
+							<a class="collapsed a-collapsed" href="#" onclick="javascript:return EP.Navigation.DfmenuAction(document.forms.AcFormChat, 'EC_EP_AC_NOUS_CON');" aria-expanded="false" aria-controls="collapseFour">
+								<div class="panel-heading" role="tab" id="headingFour">
+									<h2 class="panel-title">
+										Nous contacter
+									</h2>
+								</div>
+							</a>
+							<div >
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer-nie">
+	<div class="social">
+		<div class="fa fa-linkedin custom-tooltip" onclick="window.open('https://www.linkedin.com/showcase/natixis-interepargne/')">
+			<span class="custom-tooltip-text">
+				Retrouvez Natixis Interépargne sur
+				Linkedin
+			</span>
+		</div>
+		<div class="fa fa-twitter custom-tooltip" onclick="window.open('https://twitter.com/NatixisIE')">
+			<span class="custom-tooltip-text">
+				Retrouvez Natixis Interépargne sur
+				Twitter
+			</span>
+		</div>
+		<div class="fa fa-youtube-play custom-tooltip" onclick="window.open('https://www.youtube.com/user/natixisinterepargne')">
+			<span class="custom-tooltip-text">
+				Retrouvez Natixis Interépargne sur
+				Youtube
+			</span>
+		</div>
+		<ul>
+			<li>
+				<a href="javascript:EP.Modal.loadPageForPopup('/def_int_ep/ep/menu.do?dfMenuId=SC_EP_GL_INFSECU', null, 720, 525, null, 'Sécurité');">
+					Sécurité
+				</a>
+			</li>
+			
+			<li>
+				<a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_GP_DOC">
+					Tarification
+				</a>
+			</li>
+			
+			<li>
+				<a href="menu.do?dfMenuId=SC_EP_PP_LEG" target="_blank" title="Mentions légales" onclick="javascript:EP.Stats.sendClickTag('mentions legales','navigation');">
+					Mentions légales
+				</a>
+			</li>
+			<li>
+				<a href="menu.do?dfMenuId=SC_EP_PP_CGU" target="_blank" title="Conditions générales">
+					Conditions générales
+				</a>
+			</li>
+			
+		</ul>
+	</div>
+
+	<hr>
+	<div class="bottom-footer">
+		<div class="img-container">
+			<img src="/def_int_ep/assets/img/logo/Logo_BPCE.png" alt="BPCE-logo">
+		</div>
+		<span>©Natixis 2019</span>
+	</div>
+
+</footer>
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script>
+		//nom jsp
+		EP.Stats.pageName="/ep/angular/body-angular.jsp"; 
+		EP.Stats.init("logc233", "logs1233", "xiti.com", "536488");
+		EP.Stats.sendPageTag("/ep/angular/body-angular.jsp", "fr");
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" id="popupModalBootstrap" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="layer-5 modal-content">
+			<div class="modal-header">
+				<h2 class="modal-title" id="popupModalBootstrapTitle"></h2>
+				<button type="button" class="close allowed-to-proceed" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true" class="material-icons">close</span>
+				</button>
+			</div>
+			<div class="modal-body" id="popupModalBootstrapBody">
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<script>
+	$(document).ready(function() {
+		EP.User.Session.init(660000 );
+	});
+</script>
+<div id="modal-expiration-session" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content layer-5">
+			<div class="modal-header">
+				<h4 class="modal-title expiration-session-already">Vous avez été déconnecté</h4>
+				
+					
+				
+			</div>
+			<div class="modal-body py-2 row align-items-center">
+				<div class="col-4 col-sm-2">
+					<img src="/def_int_ep/assets/img/pictonatixis/chrono.svg" class="img-fluid" alt="">
+				</div>
+				<div class="col-8 col-sm-10">
+					<p class="p1 expiration-session-already">
+						Votre session a expiré.
+					</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary allowed-to-proceed expiration-session-already" onclick="location.href='/def_int_ep/ep/home.do';">
+					Se reconnecter
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+	</section>
+	
+	<script src="/front/runtime.js"></script>
+	<script src="/front/polyfills.js"></script>
+	<script src="/front/main.js"></script>
+
+</body>
+
+</html>
