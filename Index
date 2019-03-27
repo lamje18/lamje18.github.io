@@ -1,0 +1,825 @@
+<html lang="fr"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Natixis Interépargne</title>
+	
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="expires" content="-1">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta name="DESCRIPTION" content="Natixis Interépargne, filiale de Natixis, Natixis Interépargne est le numéro un de l'épargne salariale en France">
+	<meta name="KEYWORDS" content="épargne salariale, épargne, Interépargne, Natixis, Groupe Natixis, Groupe Natexis Banques Populaires, Natexis, Banque Populaire, intéressement, participation, compte épargne temps, plan d'épargne, Plan Epargne Long Terme (PELT), actionnariat salarié, plan d'épargne retraite collectif (PERCO/PERCOI), PEE, PEI, ingénierie sociale, Groupe Banque Populaire, Groupe Caisse d'Epargne, retraite, épargne retraite, ISR">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script>
+		var anchor = window.location.hash.substr(1);
+		var params = anchor ? getParams(anchor) : {};
+		if ('expires_in' in params && 'access_token' in params) {
+			var dt = new Date();
+			dt.setSeconds(dt.getSeconds() + Number(params['expires_in']) - 60);
+			sessionStorage.setItem("Authorization", params['access_token']);
+			sessionStorage.setItem("Expires", dt);
+			sessionStorage.setItem("EmployeeId", "6125-54317");
+		} else {
+			var tokenValid = sessionStorage.getItem("Authorization") &&  sessionStorage.getItem("Expires") && new Date(sessionStorage.getItem("Expires")) > new Date();
+			var employeeValid = sessionStorage.getItem("EmployeeId") &&  sessionStorage.getItem("EmployeeId") == "6125-54317";
+			if (!tokenValid || !employeeValid) {
+			    var path = location.pathname.substring(0, location.pathname.lastIndexOf("/"));
+				var redirectUrl = encodeURIComponent( location.protocol + '//' + location.host + path + "/menu.do?dfAT=menu&dfMenuId=SC_EP_AC" );
+				window.location.replace("/def_int_ep/ep/saml.do?redirect_uri=" + redirectUrl);
+			}
+		}
+
+		function getParams(search) {
+			var finalParams = {};
+			var params = search.split('&');
+			params.forEach(function (param) {
+				var pairs = param.split('=');
+				if (pairs.length === 2 && pairs[0] != null && pairs[0].length > 0) {
+					finalParams[pairs[0]] = pairs[1];
+				} else if (pairs.length === 1 && pairs[0] != null && pairs[0].length > 0) {
+					finalParams[pairs[0]] = null;
+				}
+			});
+			return finalParams;
+		}
+	</script>
+
+	
+	 
+ 
+ 
+
+	 
+
+
+
+
+
+
+
+<link rel="icon" type="image/png" href="/def_int_ep/assets/img/common/favicon.png">
+
+<link rel="stylesheet" href="/def_int_ep/assets/css/common/angular.min.css">
+<link rel="stylesheet" href="/front/styles.css">
+
+<script src="/def_int_ep/assets/js/newapp.min.js"></script>
+
+
+<script>
+    // Formatage des nombres
+    EP.Globals.decimalsSeparator = ",";
+    EP.Globals.thousandsSeparator = "&nbsp;";
+    EP.Globals.euro = 'EUR';
+	$(document).ready(function() {
+		// Activation des tabs
+		EP.TabToggle.init();
+
+		// Messages dÃ©pliables
+		EP.InfoBox.init();
+
+		// Initialisation des popovers
+		EP.Popover.initListener($('.tooltipUl'));
+
+		// Initialisation des tooltips
+		$(document).tooltip({
+			selector: ".tooltip-info",
+			container: "body"
+		});
+		EP.tooltips.initTooltips();
+
+		EP.group_option.initGroupOption();
+
+		EP.header.initHeader();
+
+		EP.notification.initNotification();
+
+		EP.Input.initInputListeners();
+
+		EP.Input.initCrossInput();
+
+		EP.header.initHeaderSlider();
+
+		EP.swipe = EP.table.initSlider();
+
+        EP.data_picker.initDateTimePicker("fr");
+
+		EP.tabs.initTabs();
+	});
+</script>
+	
+
+	
+
+<style type="text/css">
+/*
+  @angular/flex-layout - workaround for possible browser quirk with mediaQuery listeners
+  see http://bit.ly/2sd4HMP
+*/
+@media (min-width: 897px), screen and (min-width: 960px), screen and (min-width: 1280px), screen and (min-width: 1920px), screen and (min-width: 1920px) and (max-width: 5000px), screen and (max-width: 1919px), screen and (min-width: 1280px) and (max-width: 1919px), screen and (max-width: 1279px), (min-width: 897px) and (max-width: 1279px), screen and (max-width: 959px), screen and (min-width: 600px) and (max-width: 959px), screen and (max-width: 599px), (max-width: 896px), print {.fx-query-test{ }}
+</style><style>.tour-step .mat-menu-content { 
+          padding: 0 !important; 
+      }</style><style>.mat-menu-panel{min-width:112px;max-width:280px;overflow:auto;-webkit-overflow-scrolling:touch;max-height:calc(100vh - 48px);border-radius:4px;outline:0}.mat-menu-panel.ng-animating{pointer-events:none}@media (-ms-high-contrast:active){.mat-menu-panel{outline:solid 1px}}.mat-menu-content:not(:empty){padding-top:8px;padding-bottom:8px}.mat-menu-item{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:0;border:none;-webkit-tap-highlight-color:transparent;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;line-height:48px;height:48px;padding:0 16px;text-align:left;text-decoration:none;max-width:100%;position:relative}.mat-menu-item::-moz-focus-inner{border:0}.mat-menu-item[disabled]{cursor:default}[dir=rtl] .mat-menu-item{text-align:right}.mat-menu-item .mat-icon{margin-right:16px;vertical-align:middle}.mat-menu-item .mat-icon svg{vertical-align:top}[dir=rtl] .mat-menu-item .mat-icon{margin-left:16px;margin-right:0}@media (-ms-high-contrast:active){.mat-menu-item-highlighted,.mat-menu-item.cdk-keyboard-focused,.mat-menu-item.cdk-program-focused{outline:dotted 1px}}.mat-menu-item-submenu-trigger{padding-right:32px}.mat-menu-item-submenu-trigger::after{width:0;height:0;border-style:solid;border-width:5px 0 5px 5px;border-color:transparent transparent transparent currentColor;content:'';display:inline-block;position:absolute;top:50%;right:16px;transform:translateY(-50%)}[dir=rtl] .mat-menu-item-submenu-trigger{padding-right:16px;padding-left:32px}[dir=rtl] .mat-menu-item-submenu-trigger::after{right:auto;left:16px;transform:rotateY(180deg) translateY(-50%)}button.mat-menu-item{width:100%}.mat-menu-item .mat-menu-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}</style><style>.mat-progress-spinner{display:block;position:relative}.mat-progress-spinner svg{position:absolute;transform:rotate(-90deg);top:0;left:0;transform-origin:center;overflow:visible}.mat-progress-spinner circle{fill:transparent;transform-origin:center;transition:stroke-dashoffset 225ms linear}._mat-animation-noopable.mat-progress-spinner circle{transition:none;animation:none}.mat-progress-spinner.mat-progress-spinner-indeterminate-animation[mode=indeterminate]{animation:mat-progress-spinner-linear-rotate 2s linear infinite}._mat-animation-noopable.mat-progress-spinner.mat-progress-spinner-indeterminate-animation[mode=indeterminate]{transition:none;animation:none}.mat-progress-spinner.mat-progress-spinner-indeterminate-animation[mode=indeterminate] circle{transition-property:stroke;animation-duration:4s;animation-timing-function:cubic-bezier(.35,0,.25,1);animation-iteration-count:infinite}._mat-animation-noopable.mat-progress-spinner.mat-progress-spinner-indeterminate-animation[mode=indeterminate] circle{transition:none;animation:none}.mat-progress-spinner.mat-progress-spinner-indeterminate-fallback-animation[mode=indeterminate]{animation:mat-progress-spinner-stroke-rotate-fallback 10s cubic-bezier(.87,.03,.33,1) infinite}._mat-animation-noopable.mat-progress-spinner.mat-progress-spinner-indeterminate-fallback-animation[mode=indeterminate]{transition:none;animation:none}.mat-progress-spinner.mat-progress-spinner-indeterminate-fallback-animation[mode=indeterminate] circle{transition-property:stroke}._mat-animation-noopable.mat-progress-spinner.mat-progress-spinner-indeterminate-fallback-animation[mode=indeterminate] circle{transition:none;animation:none}@keyframes mat-progress-spinner-linear-rotate{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@keyframes mat-progress-spinner-stroke-rotate-100{0%{stroke-dashoffset:268.60617px;transform:rotate(0)}12.5%{stroke-dashoffset:56.54867px;transform:rotate(0)}12.5001%{stroke-dashoffset:56.54867px;transform:rotateX(180deg) rotate(72.5deg)}25%{stroke-dashoffset:268.60617px;transform:rotateX(180deg) rotate(72.5deg)}25.0001%{stroke-dashoffset:268.60617px;transform:rotate(270deg)}37.5%{stroke-dashoffset:56.54867px;transform:rotate(270deg)}37.5001%{stroke-dashoffset:56.54867px;transform:rotateX(180deg) rotate(161.5deg)}50%{stroke-dashoffset:268.60617px;transform:rotateX(180deg) rotate(161.5deg)}50.0001%{stroke-dashoffset:268.60617px;transform:rotate(180deg)}62.5%{stroke-dashoffset:56.54867px;transform:rotate(180deg)}62.5001%{stroke-dashoffset:56.54867px;transform:rotateX(180deg) rotate(251.5deg)}75%{stroke-dashoffset:268.60617px;transform:rotateX(180deg) rotate(251.5deg)}75.0001%{stroke-dashoffset:268.60617px;transform:rotate(90deg)}87.5%{stroke-dashoffset:56.54867px;transform:rotate(90deg)}87.5001%{stroke-dashoffset:56.54867px;transform:rotateX(180deg) rotate(341.5deg)}100%{stroke-dashoffset:268.60617px;transform:rotateX(180deg) rotate(341.5deg)}}@keyframes mat-progress-spinner-stroke-rotate-fallback{0%{transform:rotate(0)}25%{transform:rotate(1170deg)}50%{transform:rotate(2340deg)}75%{transform:rotate(3510deg)}100%{transform:rotate(4680deg)}}</style><style>.mat-icon{background-repeat:no-repeat;display:inline-block;fill:currentColor;height:24px;width:24px}.mat-icon.mat-icon-inline{font-size:inherit;height:inherit;line-height:inherit;width:inherit}[dir=rtl] .mat-icon-rtl-mirror{transform:scale(-1,1)}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon{display:block}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button .mat-icon{margin:auto}</style><style>.mat-divider{display:block;margin:0;border-top-width:1px;border-top-style:solid}.mat-divider.mat-divider-vertical{border-top:0;border-right-width:1px;border-right-style:solid}.mat-divider.mat-divider-inset{margin-left:80px}[dir=rtl] .mat-divider.mat-divider-inset{margin-left:auto;margin-right:80px}</style><style>.mat-subheader{display:flex;box-sizing:border-box;padding:16px;align-items:center}.mat-list-base .mat-subheader{margin:0}.mat-list-base{padding-top:8px;display:block;-webkit-tap-highlight-color:transparent}.mat-list-base .mat-subheader{height:48px;line-height:16px}.mat-list-base .mat-subheader:first-child{margin-top:-8px}.mat-list-base .mat-list-item,.mat-list-base .mat-list-option{display:block;height:48px;-webkit-tap-highlight-color:transparent;width:100%;padding:0}.mat-list-base .mat-list-item .mat-list-item-content,.mat-list-base .mat-list-option .mat-list-item-content{display:flex;flex-direction:row;align-items:center;box-sizing:border-box;padding:0 16px;position:relative;height:inherit}.mat-list-base .mat-list-item .mat-list-item-content-reverse,.mat-list-base .mat-list-option .mat-list-item-content-reverse{display:flex;align-items:center;padding:0 16px;flex-direction:row-reverse;justify-content:space-around}.mat-list-base .mat-list-item .mat-list-item-ripple,.mat-list-base .mat-list-option .mat-list-item-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}.mat-list-base .mat-list-item.mat-list-item-with-avatar,.mat-list-base .mat-list-option.mat-list-item-with-avatar{height:56px}.mat-list-base .mat-list-item.mat-2-line,.mat-list-base .mat-list-option.mat-2-line{height:72px}.mat-list-base .mat-list-item.mat-3-line,.mat-list-base .mat-list-option.mat-3-line{height:88px}.mat-list-base .mat-list-item.mat-multi-line,.mat-list-base .mat-list-option.mat-multi-line{height:auto}.mat-list-base .mat-list-item.mat-multi-line .mat-list-item-content,.mat-list-base .mat-list-option.mat-multi-line .mat-list-item-content{padding-top:16px;padding-bottom:16px}.mat-list-base .mat-list-item .mat-list-text,.mat-list-base .mat-list-option .mat-list-text{display:flex;flex-direction:column;width:100%;box-sizing:border-box;overflow:hidden;padding:0}.mat-list-base .mat-list-item .mat-list-text>*,.mat-list-base .mat-list-option .mat-list-text>*{margin:0;padding:0;font-weight:400;font-size:inherit}.mat-list-base .mat-list-item .mat-list-text:empty,.mat-list-base .mat-list-option .mat-list-text:empty{display:none}.mat-list-base .mat-list-item.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,.mat-list-base .mat-list-item.mat-list-option .mat-list-item-content .mat-list-text,.mat-list-base .mat-list-option.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,.mat-list-base .mat-list-option.mat-list-option .mat-list-item-content .mat-list-text{padding-right:0;padding-left:16px}[dir=rtl] .mat-list-base .mat-list-item.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base .mat-list-item.mat-list-option .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base .mat-list-option.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base .mat-list-option.mat-list-option .mat-list-item-content .mat-list-text{padding-right:16px;padding-left:0}.mat-list-base .mat-list-item.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,.mat-list-base .mat-list-item.mat-list-option .mat-list-item-content-reverse .mat-list-text,.mat-list-base .mat-list-option.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,.mat-list-base .mat-list-option.mat-list-option .mat-list-item-content-reverse .mat-list-text{padding-left:0;padding-right:16px}[dir=rtl] .mat-list-base .mat-list-item.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base .mat-list-item.mat-list-option .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base .mat-list-option.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base .mat-list-option.mat-list-option .mat-list-item-content-reverse .mat-list-text{padding-right:0;padding-left:16px}.mat-list-base .mat-list-item.mat-list-item-with-avatar.mat-list-option .mat-list-item-content .mat-list-text,.mat-list-base .mat-list-item.mat-list-item-with-avatar.mat-list-option .mat-list-item-content-reverse .mat-list-text,.mat-list-base .mat-list-option.mat-list-item-with-avatar.mat-list-option .mat-list-item-content .mat-list-text,.mat-list-base .mat-list-option.mat-list-item-with-avatar.mat-list-option .mat-list-item-content-reverse .mat-list-text{padding-right:16px;padding-left:16px}.mat-list-base .mat-list-item .mat-list-avatar,.mat-list-base .mat-list-option .mat-list-avatar{flex-shrink:0;width:40px;height:40px;border-radius:50%;object-fit:cover}.mat-list-base .mat-list-item .mat-list-avatar~.mat-divider-inset,.mat-list-base .mat-list-option .mat-list-avatar~.mat-divider-inset{margin-left:72px;width:calc(100% - 72px)}[dir=rtl] .mat-list-base .mat-list-item .mat-list-avatar~.mat-divider-inset,[dir=rtl] .mat-list-base .mat-list-option .mat-list-avatar~.mat-divider-inset{margin-left:auto;margin-right:72px}.mat-list-base .mat-list-item .mat-list-icon,.mat-list-base .mat-list-option .mat-list-icon{flex-shrink:0;width:24px;height:24px;font-size:24px;box-sizing:content-box;border-radius:50%;padding:4px}.mat-list-base .mat-list-item .mat-list-icon~.mat-divider-inset,.mat-list-base .mat-list-option .mat-list-icon~.mat-divider-inset{margin-left:64px;width:calc(100% - 64px)}[dir=rtl] .mat-list-base .mat-list-item .mat-list-icon~.mat-divider-inset,[dir=rtl] .mat-list-base .mat-list-option .mat-list-icon~.mat-divider-inset{margin-left:auto;margin-right:64px}.mat-list-base .mat-list-item .mat-divider,.mat-list-base .mat-list-option .mat-divider{position:absolute;bottom:0;left:0;width:100%;margin:0}[dir=rtl] .mat-list-base .mat-list-item .mat-divider,[dir=rtl] .mat-list-base .mat-list-option .mat-divider{margin-left:auto;margin-right:0}.mat-list-base .mat-list-item .mat-divider.mat-divider-inset,.mat-list-base .mat-list-option .mat-divider.mat-divider-inset{position:absolute}.mat-list-base[dense]{padding-top:4px;display:block}.mat-list-base[dense] .mat-subheader{height:40px;line-height:8px}.mat-list-base[dense] .mat-subheader:first-child{margin-top:-4px}.mat-list-base[dense] .mat-list-item,.mat-list-base[dense] .mat-list-option{display:block;height:40px;-webkit-tap-highlight-color:transparent;width:100%;padding:0}.mat-list-base[dense] .mat-list-item .mat-list-item-content,.mat-list-base[dense] .mat-list-option .mat-list-item-content{display:flex;flex-direction:row;align-items:center;box-sizing:border-box;padding:0 16px;position:relative;height:inherit}.mat-list-base[dense] .mat-list-item .mat-list-item-content-reverse,.mat-list-base[dense] .mat-list-option .mat-list-item-content-reverse{display:flex;align-items:center;padding:0 16px;flex-direction:row-reverse;justify-content:space-around}.mat-list-base[dense] .mat-list-item .mat-list-item-ripple,.mat-list-base[dense] .mat-list-option .mat-list-item-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}.mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar,.mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar{height:48px}.mat-list-base[dense] .mat-list-item.mat-2-line,.mat-list-base[dense] .mat-list-option.mat-2-line{height:60px}.mat-list-base[dense] .mat-list-item.mat-3-line,.mat-list-base[dense] .mat-list-option.mat-3-line{height:76px}.mat-list-base[dense] .mat-list-item.mat-multi-line,.mat-list-base[dense] .mat-list-option.mat-multi-line{height:auto}.mat-list-base[dense] .mat-list-item.mat-multi-line .mat-list-item-content,.mat-list-base[dense] .mat-list-option.mat-multi-line .mat-list-item-content{padding-top:16px;padding-bottom:16px}.mat-list-base[dense] .mat-list-item .mat-list-text,.mat-list-base[dense] .mat-list-option .mat-list-text{display:flex;flex-direction:column;width:100%;box-sizing:border-box;overflow:hidden;padding:0}.mat-list-base[dense] .mat-list-item .mat-list-text>*,.mat-list-base[dense] .mat-list-option .mat-list-text>*{margin:0;padding:0;font-weight:400;font-size:inherit}.mat-list-base[dense] .mat-list-item .mat-list-text:empty,.mat-list-base[dense] .mat-list-option .mat-list-text:empty{display:none}.mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,.mat-list-base[dense] .mat-list-item.mat-list-option .mat-list-item-content .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-option .mat-list-item-content .mat-list-text{padding-right:0;padding-left:16px}[dir=rtl] .mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-item.mat-list-option .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-option.mat-list-option .mat-list-item-content .mat-list-text{padding-right:16px;padding-left:0}.mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,.mat-list-base[dense] .mat-list-item.mat-list-option .mat-list-item-content-reverse .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-option .mat-list-item-content-reverse .mat-list-text{padding-left:0;padding-right:16px}[dir=rtl] .mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-item.mat-list-option .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-option.mat-list-option .mat-list-item-content-reverse .mat-list-text{padding-right:0;padding-left:16px}.mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar.mat-list-option .mat-list-item-content .mat-list-text,.mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar.mat-list-option .mat-list-item-content-reverse .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar.mat-list-option .mat-list-item-content .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar.mat-list-option .mat-list-item-content-reverse .mat-list-text{padding-right:16px;padding-left:16px}.mat-list-base[dense] .mat-list-item .mat-list-avatar,.mat-list-base[dense] .mat-list-option .mat-list-avatar{flex-shrink:0;width:36px;height:36px;border-radius:50%;object-fit:cover}.mat-list-base[dense] .mat-list-item .mat-list-avatar~.mat-divider-inset,.mat-list-base[dense] .mat-list-option .mat-list-avatar~.mat-divider-inset{margin-left:68px;width:calc(100% - 68px)}[dir=rtl] .mat-list-base[dense] .mat-list-item .mat-list-avatar~.mat-divider-inset,[dir=rtl] .mat-list-base[dense] .mat-list-option .mat-list-avatar~.mat-divider-inset{margin-left:auto;margin-right:68px}.mat-list-base[dense] .mat-list-item .mat-list-icon,.mat-list-base[dense] .mat-list-option .mat-list-icon{flex-shrink:0;width:20px;height:20px;font-size:20px;box-sizing:content-box;border-radius:50%;padding:4px}.mat-list-base[dense] .mat-list-item .mat-list-icon~.mat-divider-inset,.mat-list-base[dense] .mat-list-option .mat-list-icon~.mat-divider-inset{margin-left:60px;width:calc(100% - 60px)}[dir=rtl] .mat-list-base[dense] .mat-list-item .mat-list-icon~.mat-divider-inset,[dir=rtl] .mat-list-base[dense] .mat-list-option .mat-list-icon~.mat-divider-inset{margin-left:auto;margin-right:60px}.mat-list-base[dense] .mat-list-item .mat-divider,.mat-list-base[dense] .mat-list-option .mat-divider{position:absolute;bottom:0;left:0;width:100%;margin:0}[dir=rtl] .mat-list-base[dense] .mat-list-item .mat-divider,[dir=rtl] .mat-list-base[dense] .mat-list-option .mat-divider{margin-left:auto;margin-right:0}.mat-list-base[dense] .mat-list-item .mat-divider.mat-divider-inset,.mat-list-base[dense] .mat-list-option .mat-divider.mat-divider-inset{position:absolute}.mat-nav-list a{text-decoration:none;color:inherit}.mat-nav-list .mat-list-item{cursor:pointer;outline:0}mat-action-list button{background:0 0;color:inherit;border:none;font:inherit;outline:inherit;-webkit-tap-highlight-color:transparent}mat-action-list button::-moz-focus-inner{border:0}mat-action-list .mat-list-item{cursor:pointer;outline:inherit}.mat-list-option:not(.mat-list-item-disabled){cursor:pointer;outline:0}@media (-ms-high-contrast:active){.mat-selection-list:focus{outline-style:dotted}.mat-list-option:focus,.mat-list-option:hover,.mat-nav-list .mat-list-item:focus,.mat-nav-list .mat-list-item:hover,mat-action-list .mat-list-item:focus,mat-action-list .mat-list-item:hover{outline:dotted 1px}}@media (hover:none){.mat-list-option:not(.mat-list-item-disabled):hover,.mat-nav-list .mat-list-item:not(.mat-list-item-disabled):hover{background:0 0}}</style><style>.mat-card{transition:box-shadow 280ms cubic-bezier(.4,0,.2,1);display:block;position:relative;padding:16px;border-radius:4px}.mat-card .mat-divider-horizontal{position:absolute;left:0;width:100%}[dir=rtl] .mat-card .mat-divider-horizontal{left:auto;right:0}.mat-card .mat-divider-horizontal.mat-divider-inset{position:static;margin:0}[dir=rtl] .mat-card .mat-divider-horizontal.mat-divider-inset{margin-right:0}@media (-ms-high-contrast:active){.mat-card{outline:solid 1px}}.mat-card-actions,.mat-card-content,.mat-card-subtitle{display:block;margin-bottom:16px}.mat-card-title{display:block;margin-bottom:8px}.mat-card-actions{margin-left:-8px;margin-right:-8px;padding:8px 0}.mat-card-actions-align-end{display:flex;justify-content:flex-end}.mat-card-image{width:calc(100% + 32px);margin:0 -16px 16px -16px}.mat-card-footer{display:block;margin:0 -16px -16px -16px}.mat-card-actions .mat-button,.mat-card-actions .mat-raised-button{margin:0 8px}.mat-card-header{display:flex;flex-direction:row}.mat-card-header .mat-card-title{margin-bottom:12px}.mat-card-header-text{margin:0 16px}.mat-card-avatar{height:40px;width:40px;border-radius:50%;flex-shrink:0;object-fit:cover}.mat-card-title-group{display:flex;justify-content:space-between}.mat-card-sm-image{width:80px;height:80px}.mat-card-md-image{width:112px;height:112px}.mat-card-lg-image{width:152px;height:152px}.mat-card-xl-image{width:240px;height:240px;margin:-8px}.mat-card-title-group>.mat-card-xl-image{margin:-8px 0 8px 0}@media (max-width:599px){.mat-card-title-group{margin:0}.mat-card-xl-image{margin-left:0;margin-right:0}}.mat-card-content>:first-child,.mat-card>:first-child{margin-top:0}.mat-card-content>:last-child:not(.mat-card-footer),.mat-card>:last-child:not(.mat-card-footer){margin-bottom:0}.mat-card-image:first-child{margin-top:-16px;border-top-left-radius:inherit;border-top-right-radius:inherit}.mat-card>.mat-card-actions:last-child{margin-bottom:-8px;padding-bottom:0}.mat-card-actions .mat-button:first-child,.mat-card-actions .mat-raised-button:first-child{margin-left:0;margin-right:0}.mat-card-subtitle:not(:first-child),.mat-card-title:not(:first-child){margin-top:-4px}.mat-card-header .mat-card-subtitle:not(:first-child){margin-top:-8px}.mat-card>.mat-card-xl-image:first-child{margin-top:-8px}.mat-card>.mat-card-xl-image:last-child{margin-bottom:-8px}</style><style>.mat-button .mat-button-focus-overlay,.mat-icon-button .mat-button-focus-overlay{opacity:0}.mat-button:hover .mat-button-focus-overlay,.mat-stroked-button:hover .mat-button-focus-overlay{opacity:.04}@media (hover:none){.mat-button:hover .mat-button-focus-overlay,.mat-stroked-button:hover .mat-button-focus-overlay{opacity:0}}.mat-button,.mat-flat-button,.mat-icon-button,.mat-stroked-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:0;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible}.mat-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner{border:0}.mat-button[disabled],.mat-flat-button[disabled],.mat-icon-button[disabled],.mat-stroked-button[disabled]{cursor:default}.mat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-button.cdk-program-focused .mat-button-focus-overlay,.mat-flat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-flat-button.cdk-program-focused .mat-button-focus-overlay,.mat-icon-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-icon-button.cdk-program-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner{border:0}.mat-raised-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:0;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0,0,0);transition:background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1)}.mat-raised-button::-moz-focus-inner{border:0}.mat-raised-button[disabled]{cursor:default}.mat-raised-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-raised-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-raised-button::-moz-focus-inner{border:0}._mat-animation-noopable.mat-raised-button{transition:none;animation:none}.mat-stroked-button{border:1px solid currentColor;padding:0 15px;line-height:34px}.mat-stroked-button .mat-button-focus-overlay,.mat-stroked-button .mat-button-ripple.mat-ripple{top:-1px;left:-1px;right:-1px;bottom:-1px}.mat-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:0;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0,0,0);transition:background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);min-width:0;border-radius:50%;width:56px;height:56px;padding:0;flex-shrink:0}.mat-fab::-moz-focus-inner{border:0}.mat-fab[disabled]{cursor:default}.mat-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-fab{transition:none;animation:none}.mat-fab .mat-button-wrapper{padding:16px 0;display:inline-block;line-height:24px}.mat-mini-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:0;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0,0,0);transition:background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);min-width:0;border-radius:50%;width:40px;height:40px;padding:0;flex-shrink:0}.mat-mini-fab::-moz-focus-inner{border:0}.mat-mini-fab[disabled]{cursor:default}.mat-mini-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-mini-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-mini-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-mini-fab{transition:none;animation:none}.mat-mini-fab .mat-button-wrapper{padding:8px 0;display:inline-block;line-height:24px}.mat-icon-button{padding:0;min-width:0;width:40px;height:40px;flex-shrink:0;line-height:40px;border-radius:50%}.mat-icon-button .mat-icon,.mat-icon-button i{line-height:24px}.mat-button-focus-overlay,.mat-button-ripple.mat-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none;border-radius:inherit}.mat-button-focus-overlay{opacity:0;transition:opacity .2s cubic-bezier(.35,0,.25,1),background-color .2s cubic-bezier(.35,0,.25,1)}._mat-animation-noopable .mat-button-focus-overlay{transition:none}@media (-ms-high-contrast:active){.mat-button-focus-overlay{background-color:#fff}}@media (-ms-high-contrast:black-on-white){.mat-button-focus-overlay{background-color:#000}}.mat-button-ripple-round{border-radius:50%;z-index:1}.mat-button .mat-button-wrapper>*,.mat-fab .mat-button-wrapper>*,.mat-flat-button .mat-button-wrapper>*,.mat-icon-button .mat-button-wrapper>*,.mat-mini-fab .mat-button-wrapper>*,.mat-raised-button .mat-button-wrapper>*,.mat-stroked-button .mat-button-wrapper>*{vertical-align:middle}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button{display:block;font-size:inherit;width:2.5em;height:2.5em}@media (-ms-high-contrast:active){.mat-button,.mat-fab,.mat-flat-button,.mat-icon-button,.mat-mini-fab,.mat-raised-button{outline:solid 1px}}</style></head>
+
+<body class="nie-container">
+
+<section class="bootstrap-angular">
+
+
+<header class="header-nie">
+	<div class="header-nie-top col-12">
+		<div class="left">
+            
+            
+                <div class="burger collapsed material-icons" data-toggle="collapse" data-target="#menu" aria-expanded="false" aria-controls="menu"></div>
+                <a class="img-container" href="#" onclick="javascript:return EP.Navigation.DfmenuAction(document.forms.MainForm,'SC_EP_AC');">
+                    <img src="/def_int_ep/assets/img/logo/nie_newlogo.png" alt="Natixis-interepargne-logo">
+                </a>
+            
+		</div>
+		<div class="right">
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="img-container">
+	
+</div>
+
+<div class="profil">
+	<p>Votre site d'épargne salariale</p>
+	<div class="dropdown">
+		<button type="button" class="btn btn-primary" data-toggle="dropdown">
+			<i class="material-icons">account_circle</i>
+			<span class="button-texte">
+				<span>Épargnant</span>
+				<span>JEAN                 LAM                           </span>
+			</span>
+		</button>
+		<div class="dropdown-menu dropdown-menu-right">
+			<p>
+				
+					Dernière connexion le 
+					27/03/2019
+					à
+					14:08:56
+				
+			</p>
+		    
+			<a class="dropdown-item" href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_AV_IDE" title="Voir vos informations personnelles">
+				Vos informations personnelles
+			</a>
+			<a class="dropdown-item logout" href="/def_int_ep/ep/deconnexion.do?dfAT=firstDisplay" title="Déconnexion">
+				<i class="material-icons">power_settings_new</i>
+				Déconnexion
+			</a>
+		</div>
+	</div>
+</div>
+			
+		</div>
+	</div>
+	
+	<div class="menu-container col-12">
+		<nav id="menu">
+			
+			
+
+
+
+
+
+
+
+
+<ul class="header-slider swiper-no-swiping swiper-container-initialized swiper-container-horizontal">
+	<div class="swiper-wrapper">
+	    <li class="swiper-slide swiper-slide-active"><a class="link-primary" href="#" onclick="javascript:return EP.Navigation.DfmenuAction(document.forms.MainForm,'SC_EP_AC');"><i class="material-icons">home</i></a></li><li class="swiper-slide swiper-slide-next"><span>Votre épargne</span><div><ul class="col-xl-3"><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_AV_DET_NEW" class="menu-item-link"><div>Votre épargne en détail</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_AV_ABD" class="menu-item-link"><div>Votre abondement</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_ALERT_SOLD" class="menu-item-link"><div>Gérer mes alertes sur compte</div><i class="material-icons">notifications</i></a></li></ul><ul class="col-xl-3"><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_OP_GDS" class="menu-item-link"><div>Choix du mode de Gestion pilotée</div></a></li><li class="swiper-slide"><a target="_blank" href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_AV_AMPLUS" class="menu-item-link"><div>Votre objectif retraite avec Amplus</div><i class="material-icons">exit_to_app</i></a></li></ul></div></li><li class="swiper-slide"><span>Fonds</span><div><ul class="col-xl-3"><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_FO_SFP" class="menu-item-link"><div>Synthèse des fonds proposés</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_ALERT_VALO" class="menu-item-link"><div>Alertes sur fonds</div><i class="material-icons">notifications</i></a></li></ul></div></li><li class="swiper-slide"><span>Vos opérations</span><div><ul class="col-xl-3"><li><span>Opérations passées</span><i></i></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_OP_HIS" class="menu-item-link"><div>Historique des opérations</div></a></li></ul><ul class="col-xl-3"><li><span>J'épargne</span><i></i></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_OP_BO" class="menu-item-link"><div>Participation et intéressement</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_OP_REPDSP" class="menu-item-link"><div>Réponse disponibilité</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_OP_VLIB" class="menu-item-link"><div>Versements</div></a></li></ul><ul class="col-xl-3"><li><span>Je gère</span><i></i></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_OP_DMDTRF" class="menu-item-link"><div>Arbitrage</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_OP_DMDTAP" class="menu-item-link"><div>Transfert entre produits</div></a></li></ul><ul class="col-xl-3"><li><span>Je perçois</span><i></i></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_OP_DMD_RMB" class="menu-item-link"><div>Remboursement</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_GP_CDD" class="menu-item-link"><div>Cas de déblocage</div><i class="material-icons">description</i></a></li></ul></div></li><li class="swiper-slide"><span>Vos services</span><div><ul class="col-xl-3"><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_AV_IDE" class="menu-item-link"><div>Vos informations personnelles</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_SV_REL" class="menu-item-link"><div>Vos relevés et documents en ligne</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_OP_ESERV" class="menu-item-link"><div>Inscription aux relevés en ligne</div></a></li></ul><ul class="col-xl-3"><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_GP_DOC" class="menu-item-link"><div>Documentation</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_GP_CMD_DOC" class="menu-item-link"><div>Commande de documents papier</div></a></li></ul><ul class="col-xl-3"><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_GP_SIM" class="menu-item-link"><div>Outils et simulateurs</div></a></li><li class="swiper-slide"><a href="#" onclick="window.open('https://www.interepargne.natixis.com/nie/epargnants/l-epargne-salariale-en-bref/l-epargne-salariale-en-video-jbm_659485.html','_blank')" class="menu-item-link"><div>Vidéos</div><i class="material-icons">exit_to_app</i></a></li></ul><ul class="col-xl-3"><li class="swiper-slide"><a href="#" onclick="window.open('https://www.interepargne.natixis.com/nie/epargnants/nos-actualites-mby_45741.html','_blank')" class="menu-item-link"><div>Actualités</div><i class="material-icons">exit_to_app</i></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_GP_FAQ" class="menu-item-link"><div>Questions fréquentes</div></a></li></ul></div></li>
+	</div>
+<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></ul>
+
+			
+	<div id="ombre" style="display: none;"></div>
+		</nav>
+		
+	<div class="responsive-header collapsed"><div></div><div><ul class="col-xl-3"><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_AV_DET_NEW" class="menu-item-link"><div>Votre épargne en détail</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_AV_ABD" class="menu-item-link"><div>Votre abondement</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_ALERT_SOLD" class="menu-item-link"><div>Gérer mes alertes sur compte</div><i class="material-icons">notifications</i></a></li></ul><ul class="col-xl-3"><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_OP_GDS" class="menu-item-link"><div>Choix du mode de Gestion pilotée</div></a></li><li class="swiper-slide"><a target="_blank" href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_AV_AMPLUS" class="menu-item-link"><div>Votre objectif retraite avec Amplus</div><i class="material-icons">exit_to_app</i></a></li></ul></div><div><ul class="col-xl-3"><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_FO_SFP" class="menu-item-link"><div>Synthèse des fonds proposés</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_ALERT_VALO" class="menu-item-link"><div>Alertes sur fonds</div><i class="material-icons">notifications</i></a></li></ul></div><div><ul class="col-xl-3"><li><span>Opérations passées</span><i></i></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_OP_HIS" class="menu-item-link"><div>Historique des opérations</div></a></li></ul><ul class="col-xl-3"><li><span>J'épargne</span><i></i></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_OP_BO" class="menu-item-link"><div>Participation et intéressement</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_OP_REPDSP" class="menu-item-link"><div>Réponse disponibilité</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_OP_VLIB" class="menu-item-link"><div>Versements</div></a></li></ul><ul class="col-xl-3"><li><span>Je gère</span><i></i></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_OP_DMDTRF" class="menu-item-link"><div>Arbitrage</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_OP_DMDTAP" class="menu-item-link"><div>Transfert entre produits</div></a></li></ul><ul class="col-xl-3"><li><span>Je perçois</span><i></i></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_OP_DMD_RMB" class="menu-item-link"><div>Remboursement</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_GP_CDD" class="menu-item-link"><div>Cas de déblocage</div><i class="material-icons">description</i></a></li></ul></div><div><ul class="col-xl-3"><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_AV_IDE" class="menu-item-link"><div>Vos informations personnelles</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_SV_REL" class="menu-item-link"><div>Vos relevés et documents en ligne</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_OP_ESERV" class="menu-item-link"><div>Inscription aux relevés en ligne</div></a></li></ul><ul class="col-xl-3"><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_GP_DOC" class="menu-item-link"><div>Documentation</div></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_GP_CMD_DOC" class="menu-item-link"><div>Commande de documents papier</div></a></li></ul><ul class="col-xl-3"><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_GP_SIM" class="menu-item-link"><div>Outils et simulateurs</div></a></li><li class="swiper-slide"><a href="#" onclick="window.open('https://www.interepargne.natixis.com/nie/epargnants/l-epargne-salariale-en-bref/l-epargne-salariale-en-video-jbm_659485.html','_blank')" class="menu-item-link"><div>Vidéos</div><i class="material-icons">exit_to_app</i></a></li></ul><ul class="col-xl-3"><li class="swiper-slide"><a href="#" onclick="window.open('https://www.interepargne.natixis.com/nie/epargnants/nos-actualites-mby_45741.html','_blank')" class="menu-item-link"><div>Actualités</div><i class="material-icons">exit_to_app</i></a></li><li class="swiper-slide"><a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_GP_FAQ" class="menu-item-link"><div>Questions fréquentes</div></a></li></ul></div></div></div>
+</header>
+
+
+	
+		
+			<main class="page-content container angular-home">
+		
+		
+	
+
+	
+	<form name="MainForm" method="post" action="/def_int_ep/ep/menu.do" target="">
+		<input type="hidden" name="dfAT" value="actionTypeHere">
+		<input type="hidden" name="dfMenuId" value="-1">
+	</form>
+
+
+	
+		
+
+
+	
+		
+
+
+	
+
+
+		
+
+		
+			<div class="content-wrapper">
+				<section class="col-12 container">
+		
+
+				
+				
+
+			</section>
+
+			
+	</div>
+
+</main>
+</section>
+
+	
+		
+			<section class="angular-wrapper angular-home">
+		
+		
+	
+	<section class="angular-content">
+		
+			
+			
+			
+			
+			
+			
+		
+
+
+
+
+
+
+
+
+
+
+<script>
+    window.addEventListener('message', function (event) {
+        var data = event != null ? event.data : null;
+        var eventData = data != null ? data.data : null;
+        if (eventData != null && event.origin === document.location.origin &&
+            data.apiKey === 'f58ec1d6-af51-4be2-acab-dbf9b0636069') {
+            if (data.type === 'SELECT_FUND') {
+                EP.Modal.loadPageForPopupWithScript('/def_int_ep/ep/popup/fo/sfp.do?dfAT=detail&dfMenuId=' + eventData._id,
+                    eventData._title, '#popupDetailFond', '#popupModalBootstrap', true);
+            }
+        }
+    }, false);
+
+</script>
+
+<app-root page="dashboard" i18n="[&quot;common&quot;, &quot;saving&quot;, &quot;dashboard&quot;, &quot;distribution&quot;, &quot;transaction&quot;]" lang="fr" theme="natixis" params="{&quot;employeeId&quot;:&quot;6125-54317&quot;}" ng-version="7.2.4"><div id="f85ThemeContainer" class="f85-nie-ep-front-web-natixis"><router-outlet></router-outlet><app-dashboard-page class="ng-star-inserted"><div class="f85-page-dashboard-container" fxlayout="column" fxlayoutalign="start stretch" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: stretch flex-start; align-items: stretch; max-width: 100%;"><!----><!----><div class="f85-dashboard-page-header f85-dashboard-page-header-margin ng-star-inserted" fxlayout="column" fxlayoutalign="start stretch" style="background-image: url(&quot;/front/assets/images/dashboard_background.png&quot;); flex-direction: column; box-sizing: border-box; display: flex; place-content: stretch flex-start; align-items: stretch; max-width: 100%;"><div class="f85-dashboard-title-container f85-dashboard-title-container-row" fxlayout="row" fxlayout.xs="column" fxlayoutalign="center stretch" fxlayoutgap="50px" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: stretch center; align-items: stretch; max-height: 100%;"><div class="f85-dashboard-title-margin" fxflex="67" fxlayout="row wrap" fxlayoutalign="center center" fxlayoutgap="12px" style="flex-flow: row wrap; box-sizing: border-box; display: flex; place-content: center; align-items: center; flex: 1 1 100%; max-width: 67%;"><h1 class="f85-dashboard-title" style="margin-right: 12px;">Bienvenue sur votre</h1><h1 class="f85-dashboard-title f85-dashboard-blue-accent">tableau de bord !</h1></div><!----></div></div><!----><div class="f85-page-dashboard-content" fxlayout="column" fxlayoutalign="start stretch" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: stretch flex-start; align-items: stretch; max-width: 100%;"><div class="f85-page-dashboard-donut-news-container" fxlayout="row" fxlayout.xs="column" fxlayoutalign="start stretch" fxlayoutgap="50px" fxlayoutgap.md="20px" fxlayoutgap.xs="30px" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: stretch flex-start; align-items: stretch; max-height: 100%;"><!----><!----><div class="f85-page-dashboard-donut-container ng-star-inserted" fxflex="67" fxlayout="row" fxlayoutalign="start start" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: flex-start; align-items: flex-start; flex: 1 1 100%; max-width: 67%; margin-right: 50px;"><app-dashboard-donut style="flex: 1 1 100%; box-sizing: border-box;"><div fxlayout="column" fxlayoutalign="start stretch" fxlayoutgap="20px" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: stretch flex-start; align-items: stretch; max-width: 100%;"><!----><!----><div class="ea6-component-dashboard-donut-header ng-star-inserted" fxlayout.gt-xs="row" fxlayout.xs="column" fxlayoutalign.gt-xs="start end" fxlayoutalign.xs="start center" fxlayoutgap.gt-xs="2px" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: flex-end flex-start; align-items: flex-end; margin-bottom: 20px;"><h1 style="margin-right: 2px;"> VOTRE ÉPARGNE </h1><p class="ea6-theme-p2 ea6-component-dashboard-donut-subtitle ea6-component-dashboard-donut-label"> AU 26/03/2019</p></div><div fxlayout="column" fxlayoutalign="start stretch" class="ng-star-inserted" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: stretch flex-start; align-items: stretch; max-width: 100%; margin-bottom: 20px;"><app-layer layertype="VERY_LIGHT"><div class="ea6-theme-layer" ea6layertype="VERY_LIGHT"><div class="ea6-component-dashboard-donut" fxlayout.gt-xs="row" fxlayout.xs="column" fxlayoutalign="start center" fxlayoutgap.gt-xs="25px" fxlayoutgap.xs="25px" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center flex-start; align-items: center;"><div fxlayout="column" fxlayoutalign="start start" fxlayoutgap="15px" style="margin-right: 25px; flex-direction: column; box-sizing: border-box; display: flex; place-content: flex-start; align-items: flex-start;"><!----><div fxlayout="column" fxlayoutalign="center start" fxlayoutalign.xs="start center" class="ng-star-inserted" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: flex-start center; align-items: flex-start; margin-bottom: 15px;"><p class="ea6-theme-p2 ea6-component-dashboard-donut-label" translate="component.common.amount">Montant</p><h1 class="ea6-theme-amount-color"> 5&nbsp;018,75 EUR </h1></div><div fxlayout="column" fxlayoutalign="center start" fxlayoutalign.xs="start center" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: flex-start center; align-items: flex-start;"><!----><!----><p class="ea6-theme-p2 ea6-component-dashboard-donut-label ng-star-inserted" translate="component.common.gains"> Plus-values </p><h1 class="ea6-component-saving-detail-gainorloss ea6-theme-gain-color ng-star-inserted"> + 415,21 EUR </h1></div></div><div fxflex="60" fxlayout="row" fxlayoutalign="center center" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center; align-items: center; flex: 1 1 100%; max-width: 60%;"><app-donut fxflex="grow" style="flex: 1 1 100%; box-sizing: border-box; max-width: 100%; flex-direction: row; display: flex;"><app-donut-captions-template fxflex="grow" style="flex: 1 1 100%; box-sizing: border-box; max-width: 100%; flex-direction: row; display: flex;"><!----><!----><!----><!----><div fxflex="100" fxlayoutalign="start stretch" class="ng-star-inserted" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: stretch flex-start; align-items: stretch; flex: 1 1 100%; max-width: 100%;"><!----><!----><div fxlayout="column" fxlayoutalign="center center" data-highcharts-chart="0" class="ng-star-inserted" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: center; align-items: center;"><div id="highcharts-fbft9sm-0" dir="ltr" class="highcharts-container " style="position: relative; overflow: hidden; width: 166px; height: 166px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="166" height="166" viewBox="0 0 166 166"><desc>Created with Highcharts 6.2.0</desc><defs><clipPath id="highcharts-fbft9sm-3"><rect x="0" y="0" width="166" height="166" fill="none"></rect></clipPath></defs><rect fill="none" class="highcharts-background" x="0" y="0" width="166" height="166" rx="0" ry="0"></rect><rect fill="none" class="highcharts-plot-background" x="0" y="0" width="166" height="166"></rect><rect fill="none" class="highcharts-plot-border" data-z-index="1" x="0" y="0" width="166" height="166"></rect><g class="highcharts-series-group" data-z-index="3"><g data-z-index="0.1" class="highcharts-series highcharts-series-0 highcharts-pie-series highcharts-tracker " transform="translate(0,0) scale(1 1)"><path fill="#06A3BF" d="M 82.98513185613025 10.000001514121266 A 73 73 0 0 1 147.47888119184987 117.22680061366107 L 137.8070490130724 112.0927805216119 A 62.05 62.05 0 0 0 82.98736207771071 20.950001287003076 Z" transform="translate(0,0)" stroke="#ffffff" stroke-width="2" stroke-linejoin="round" class="highcharts-point highcharts-color-0"></path><path fill="#006982" d="M 147.44462215750275 117.29126237070756 A 73 73 0 1 1 82.89860446452077 10.000070418216254 L 82.91381379484265 20.950059855483822 A 62.05 62.05 0 1 0 137.77792883387735 112.14757301510143 Z" transform="translate(0,0)" stroke="#ffffff" stroke-width="2" stroke-linejoin="round" class="highcharts-point highcharts-color-1"></path></g><g data-z-index="0.1" class="highcharts-markers highcharts-series-0 highcharts-pie-series " transform="translate(0,0) scale(1 1)"></g></g><g class="highcharts-legend" data-z-index="7"><rect fill="none" class="highcharts-legend-box" rx="0" ry="0" x="0" y="0" width="8" height="8" visibility="hidden"></rect><g data-z-index="1"><g></g></g></g></svg><span class="highcharts-title" data-z-index="4" style="font-family: &quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif; font-size: 18px; position: absolute; white-space: nowrap; margin-left: 0px; margin-top: 0px; left: 83px; top: 66px; color: rgb(51, 51, 51);"></span><span class="highcharts-subtitle" data-z-index="4" style="font-family: &quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif; font-size: 12px; position: absolute; white-space: nowrap; margin-left: 0px; margin-top: 0px; left: 83px; top: 71px; color: rgb(102, 102, 102);"></span></div></div><!----><!----><app-donut-captions fxflex="grow" fxflex.xs="nogrow" fxlayout="row" style="flex-direction: row; box-sizing: border-box; display: flex; flex: 1 1 100%; max-width: 100%;"><div fxflex="100" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: stretch center; align-items: stretch; max-width: 100%; flex: 1 1 100%;"><!----><!----><app-donut-caption class="ng-star-inserted" style="flex: 0 0 auto; box-sizing: border-box; margin-bottom: 0px;"><!----><!----><div class="ea6-donuts-caption ng-star-inserted" fxlayout="row" fxlayoutalign="center center" fxlayoutgap="5px" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center; align-items: center;"><!----><div class="ea6-donuts-caption-color ng-star-inserted" style="background-color: rgb(0, 105, 130); margin-right: 5px;"></div><!----><!----><div fxlayout="row" fxlayoutgap="5px" class="ng-star-inserted" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center flex-end; align-items: center; flex: 1 1 auto; min-width: 0px;"><p apptextellipsis="" class="ea6-theme-p" style="flex: 0 1 auto; box-sizing: border-box; margin-right: 5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%; margin-top: 12.5px; margin-bottom: 12.5px;"> PEE</p><!----><!----><p class="ea6-theme-p-bold ng-star-inserted" style="margin-top: 12.5px; margin-bottom: 12.5px;">3&nbsp;373,79 EUR</p></div><!----><!----></div></app-donut-caption><!----><app-donut-caption class="ng-star-inserted" style="flex: 0 0 auto; box-sizing: border-box;"><!----><!----><div class="ea6-donuts-caption ng-star-inserted" fxlayout="row" fxlayoutalign="center center" fxlayoutgap="5px" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center; align-items: center;"><!----><div class="ea6-donuts-caption-color ng-star-inserted" style="background-color: rgb(6, 163, 191); margin-right: 5px;"></div><!----><!----><div fxlayout="row" fxlayoutgap="5px" class="ng-star-inserted" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center flex-end; align-items: center; flex: 1 1 auto; min-width: 0px;"><p apptextellipsis="" class="ea6-theme-p" style="flex: 0 1 auto; box-sizing: border-box; margin-right: 5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%; margin-top: 12.5px; margin-bottom: 12.5px;"> PERCO</p><!----><!----><p class="ea6-theme-p-bold ng-star-inserted" style="margin-top: 12.5px; margin-bottom: 12.5px;">1&nbsp;644,96 EUR</p></div><!----><!----></div></app-donut-caption></div></app-donut-captions></div><!----><!----><!----><!----><!----></app-donut-captions-template></app-donut></div></div></div></app-layer></div><div fxlayout.gt-xs="row" fxlayout.xs="column" fxlayoutalign="end center" fxlayoutgap="5px" class="ng-star-inserted" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center flex-end; align-items: center;"><a fxlayout="row" fxlayoutalign="center center" fxlayoutgap="5px" href="/def_int_ep/ep/menu.do?dfAT=menu&amp;dfMenuId=SC_EP_AV_DET_NEW" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center; align-items: center;"><p style="margin-right: 5px;">Votre épargne en détail</p><mat-icon class="mat-icon mat-primary" color="primary" role="img" svgicon="ea6:link" aria-hidden="true"><svg width="100%" height="100%" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fit="" preserveAspectRatio="xMidYMid meet" focusable="false">
+  <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+  <title>Icon/Link</title>
+  <desc>Created with Sketch.</desc>
+  <defs>
+    <path d="M3,12 C3,7.02880658 7.02983539,3 12,3 C16.9711934,3 21,7.02880658 21,12 C21,16.9711934 16.9711934,21 12,21 C7.02983539,21 3,16.9711934 3,12 Z M10,15.8891599 L11.0905826,17 L16,12.0006097 L11.0905826,7 L10,8.11084014 L13.8176377,12.0006097 L10,15.8891599 Z" id="path_ea6_link"></path>
+  </defs>
+  <g id="Styles" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="DS---Styles---Icons" transform="translate(-132.000000, -599.000000)">
+      <g id="Material" transform="translate(30.000000, 359.000000)">
+        <g id="Material-icons" transform="translate(0.000000, 64.000000)">
+          <g id="Bloc-icon-Copy-11" transform="translate(74.000000, 148.000000)">
+            <g id="Icon">
+              <g id="Icon/Link" transform="translate(25.000000, 25.000000)">
+                <mask id="mask_ea6_link" fill="white">
+                  <use xlink:href="#path_ea6_link"></use>
+                </mask>
+                <use id="Combined-Shape" fill="#581D74" fill-rule="evenodd" xlink:href="#path_ea6_link"></use>
+                <g id="Color/Purple/1" mask="url('/def_int_ep/ep/menu.do?dfAT=menu&amp;dfMenuId=SC_EP_AC#mask_ea6_link')" fill="#581D74" fill-rule="evenodd">
+                  <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg></mat-icon></a></div><!----></div></app-dashboard-donut></div><!----><!----><!----><mat-divider class="mat-divider mat-divider-vertical ng-star-inserted" role="separator" aria-orientation="vertical" style="margin-right: 50px;"></mat-divider><!----><!----><div class="f85-page-dashboard-news-container ng-star-inserted" fxflex="33" fxlayout="row" fxlayoutalign="start stretch" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: stretch flex-start; align-items: stretch; flex: 1 1 100%; max-width: 33%;"><app-news fxflex="100" style="flex: 1 1 100%; box-sizing: border-box; max-width: 100%; flex-direction: row; display: flex;"><div fxflex="grow" fxlayout="column" fxlayoutalign="start stretch" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: stretch flex-start; align-items: stretch; max-width: 100%; flex: 1 1 100%;"><!----><h3 class="ea6-component-news-title ng-star-inserted" translate="component.news.title">INFORMATIONS</h3><!----><!----><mat-list class="mat-list mat-list-base ng-star-inserted" fxlayout="column" fxlayoutalign="start stretch" fxlayoutgap="25px" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: stretch flex-start; align-items: stretch; max-width: 100%;"><!----><!----><!----><!----><mat-list-item class="mat-list-item ng-star-inserted"><div class="mat-list-item-content" style="flex-direction: row; box-sizing: border-box; display: flex;"><div class="mat-list-item-ripple mat-ripple" mat-ripple=""></div><div class="mat-list-text"></div><div class="ea6-component-news-item" fxflex="grow" fxlayout="row" fxlayoutalign="space-between center" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center space-between; align-items: center; flex: 1 1 100%; max-width: 100%;"><div fxlayout="row" fxlayoutalign="start center" fxlayoutgap="2px" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center flex-start; align-items: center;"><!----><p>Important : conseils de sécurité pour protéger efficacement votre compte</p></div><mat-icon class="mat-icon material-icons mat-icon-no-color" role="img" aria-hidden="true">keyboard_arrow_right</mat-icon></div></div></mat-list-item><!----><!----><!----></mat-list><!----><!----></div></app-news></div></div></div><div fxlayout="column" fxlayoutalign="start stretch" class="f85-page-dashboard-add-product-container" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: stretch flex-start; align-items: stretch; max-width: 100%;"><div class="f85-page-dashboard-add-product-content" fxlayout="column" fxlayoutalign="start stretch" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: stretch flex-start; align-items: stretch; max-width: 100%;"><!----><!----><!----><div fxflex="auto" fxlayout="row" fxlayoutalign="center stretch" fxlayoutgap="10px" class="ng-star-inserted" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: stretch center; align-items: stretch; flex: 1 1 auto;"><!----><!----><app-additional-product-card style="flex: 1 1 100%; box-sizing: border-box; max-width: 33.3333%; margin-right: 10px;" class="ng-star-inserted"><!----><mat-card class="mat-card ea6-component-additional-product-card ng-star-inserted" fxlayoutalign="start stretch" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: stretch flex-start; align-items: stretch; max-width: 100%;"><mat-card-content class="mat-card-content" fxflex="auto" fxlayoutalign="space-between center" fxlayoutgap="10px" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: center space-between; align-items: center; flex: 1 1 auto;"><div fxlayoutalign="space-between center" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: center space-between; align-items: center; margin-bottom: 10px;"><mat-icon class="ea6-component-additional-product-card-icon mat-icon mat-icon-no-color" role="img" aria-hidden="true"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 31.9972591 32.0045319" style="enable-background:new 0 0 31.9972591 32.0045319;" xml:space="preserve" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+<style type="text/css">
+	.st0{fill:#010101;}
+	.st1{fill:#581D74;}
+	.st2{fill:#00AAC7;}
+ </style>
+<g id="Calque_1">
+	<title>_set pictos contour non vecto_tracetailleOK_g_plansdetravail</title>
+</g>
+<g id="icon-pictoNIEset-pictos-contour-non-vecto_tracetailleOK_f_decomposé_Plan-de-travail-1-copie-87">
+	<path class="st0" d="M24.673708,26.1098099c-0.0488281,0-0.0957031-0.0146484-0.1367188-0.0400391
+		c-0.5048828-0.0327148-0.9716797-0.2504883-1.3242188-0.6201172l-3.4882812-4.2192383l-0.2646484,0.1987305
+		c-1.5292969,1.140625-3.3583984,1.7456055-5.288085,1.75c-4.8662109-0.015625-8.8232422-3.9838867-8.8232422-8.8461905
+		c0-4.8779297,3.96875-8.8461914,8.8466797-8.8461914s8.8457022,3.9682617,8.8457022,8.8461914
+		c0,1.5834961-0.4248047,3.1386709-1.2275391,4.4975576c-0.0019531,0.0048828-0.0048828,0.0092773-0.0078125,0.0131836
+		l-0.1298828,0.2250977l4.6757812,2.8457031c0.5283203,0.3896484,0.8203125,0.9677734,0.8203125,1.5986328
+		c0,0.4848633-0.1787109,0.9511719-0.5019531,1.3134766l-0.5458984,0.6162109
+		c-0.3662109,0.4140625-0.8935547,0.6572266-1.4462891,0.6669922C24.6766376,26.1098099,24.6746845,26.1098099,24.673708,26.1098099
+		z M19.7655048,20.6400833c0.0712891,0,0.1425781,0.03125,0.1914062,0.090332l3.6269531,4.3876953
+		c0.2744141,0.2866211,0.6582031,0.4536133,1.0712891,0.4580078c0.0410156,0.0004883,0.0810547,0.0112305,0.1162109,0.0307617
+		c0.3740234-0.0327148,0.7275391-0.2094727,0.9794922-0.4941406l0.546875-0.6166992
+		c0.2431641-0.2719727,0.3759766-0.6206055,0.3759766-0.9829102c0-0.4716797-0.21875-0.9038086-0.5996094-1.1860352
+		l-4.8652344-2.9599609c-0.1162109-0.0703125-0.1542969-0.2202148-0.0869141-0.3369141l0.2841797-0.4907227
+		c0.0039062-0.0063477,0.0078125-0.0126953,0.0117188-0.0185547c0.7363281-1.269043,1.125-2.7153311,1.125-4.1879873
+		c0-4.6030273-3.7451172-8.3481445-8.3476553-8.3481445c-4.6035156,0-8.3486328,3.7451172-8.3486328,8.3481445
+		c0,4.588378,3.734375,8.3334951,8.3242188,8.3481436c1.8222656-0.0039062,3.5478506-0.574707,4.99121-1.6508789l0.4541016-0.340332
+		C19.6610126,20.6566849,19.713747,20.6400833,19.7655048,20.6400833z M14.2166777,21.3939896
+		c-3.8935547,0-7.0605469-3.1674805-7.0605469-7.0610342c0-3.8666992,3.1396484-7.0292969,7.0039062-7.0605469
+		c0.0078125-0.0009766,0.015625-0.0014648,0.0234375-0.0014648c1.7626953,0,3.4316397,0.6337891,4.7236319,1.7836914
+		c1.5097656,1.347168,2.3710938,3.2685547,2.3710938,5.2783203C21.2782001,18.2265091,18.1102314,21.3939896,14.2166777,21.3939896z
+		 M14.2078886,7.7685022c-0.0078125,0.0009766-0.0146484,0.0014648-0.0224609,0.0014648
+		c-3.6015625,0.0170898-6.53125,2.9614258-6.53125,6.5629883c0,3.6191397,2.9443359,6.5629873,6.5625,6.5629873
+		c3.6191397,0,6.5634756-2.9438477,6.5634756-6.5629873c0-1.8681641-0.8007812-3.6542969-2.1972656-4.9003906
+		c-1.2080078-1.0751953-2.7587881-1.6635742-4.374999-1.6635742V7.7685022z"></path>
+	<path class="st1" d="M13.2817869,18.5719128v-7.1959991c0-0.2349997,0.1990004-0.3699999,0.448-0.3699999h0.6470003
+		c0.2559996,0,0.4549999,0.1350002,0.4549999,0.3699999v7.1959991H13.2817869z M10.3157873,18.5719128v-4.4439993
+		c0-0.2349997,0.1990004-0.3699999,0.448-0.3699999h0.6470003c0.2489996,0,0.4549999,0.1350002,0.4549999,0.3699999v4.4439993
+		H10.3157873z"></path>
+	<path class="st2" d="M16.1827869,18.5719128v-8.5689993c0-0.2419996,0.1989994-0.3699999,0.448-0.3699999h0.6900005
+		c0.2490005,0,0.448,0.1280003,0.448,0.3699999v8.5689993H16.1827869z"></path>
+</g>
+</svg></mat-icon><div fxlayout="column" fxlayoutgap="15px" fxlayoutgap.xs="10px" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: center flex-start; align-items: center;"><h2 class="ea6-component-additional-product-card-title" style="margin-bottom: 15px;">VOUS VOUS INTERROGEZ SUR VOS PLACEMENTS ?</h2><div class="ea6-component-additional-product-card-description" style="margin-bottom: 15px;"><!----><span class="ng-star-inserted"> Obtenez, sans engagement, un  </span><span class="ea6-component-additional-product-card-description-bold ng-star-inserted"> diagnostic gratuit et personnalisé  </span><span class="ng-star-inserted"> de votre épargne. </span></div><div class="ea6-component-additional-product-card-description"><!----></div></div></div><!----><a color="primary" mat-raised-button="" rel="noopener" class="mat-raised-button mat-primary ng-star-inserted" href="/def_int_ep/ep/menu.do?dfAT=menu&amp;dfMenuId=SC_EP_OP_OPT" target="_self" tabindex="0" aria-disabled="false"><span class="mat-button-wrapper"><p>Faites le point sur votre épargne</p></span><div class="mat-button-ripple mat-ripple" matripple=""></div><div class="mat-button-focus-overlay"></div></a><!----></mat-card-content></mat-card></app-additional-product-card><!----><app-additional-product-card class="ng-star-inserted" style="flex: 1 1 100%; box-sizing: border-box; max-width: 33.3333%; margin-right: 10px;"><!----><mat-card class="mat-card ea6-component-additional-product-card ng-star-inserted" fxlayoutalign="start stretch" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: stretch flex-start; align-items: stretch; max-width: 100%;"><mat-card-content class="mat-card-content" fxflex="auto" fxlayoutalign="space-between center" fxlayoutgap="10px" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: center space-between; align-items: center; flex: 1 1 auto;"><div fxlayoutalign="space-between center" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: center space-between; align-items: center; margin-bottom: 10px;"><mat-icon class="ea6-component-additional-product-card-icon mat-icon mat-icon-no-color" role="img" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.99726 32.00453" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+  <defs>
+    <style>.a9c2db43-f2d9-4bbc-ac33-246c7298240d{fill:#00aac7;}.\31 c6466cb-cba2-414a-9fb9-f1318c9b5541{fill:#581d74;}
+     </style>
+  </defs>
+  <title>_set pictos contour non vecto_tracetailleOK_g_plansdetravail</title>
+  <g id="c55ad3b8-1e02-488e-afa6-e46c926cc4bb" data-name="icon-pictoNIEset-pictos-contour-non-vecto tracetailleOK f decomposé Plan-de-travail-1-copie-87">
+    <path d="M13.28135,27.0514h-2.46a.25223.25223,0,0,1-.252-.252h0v-1.636a7.592,7.592,0,0,1-2.616-3.979l-.012-.053h-1.064a.74387.74387,0,0,1-.744-.744h0v-2.956a.74774.74774,0,0,1,.744-.744h1.3a7.471,7.471,0,0,1,1.183-2.111l-.011.015-.001-.022.002-.023v.001a5.62223,5.62223,0,0,0-1.1-3.408.26058.26058,0,0,1-.059-.166.27781.27781,0,0,1,.019-.1l-.001.002a.2583.2583,0,0,1,.219-.152h.001a13.39853,13.39853,0,0,1,5.832,1.016h.184c3.056,0,6.852,1.94,7.924,5.156a7.36535,7.36535,0,0,1,.391,2.393,7.50787,7.50787,0,0,1-2.98,5.994l-.019.014a3.15389,3.15389,0,0,1-.293.171l-.019.009v1.332a.248.248,0,0,1-.248.248h-2.468a.25205.25205,0,0,1-.252-.248v-.748h-2.948v.74a.25223.25223,0,0,1-.252.252h0Zm-2.212-.504h1.964v-.74a.248.248,0,0,1,.248-.248h3.452a.248.248,0,0,1,.248.248h0v.72h1.964v-1.201a.2522.2522,0,0,1,.127-.219l.001-.001.12-.064c.104-.056.22-.12.268-.152a7.01648,7.01648,0,0,0,2.413-7.866l.015.049c-.984-2.964-4.632-4.8-7.448-4.8-.015.001-.032.001-.05.001a.9649.9649,0,0,1-.357-.068l.007.002a12.58841,12.58841,0,0,0-5.096-.968,6.2044,6.2044,0,0,1,.891,2.813l.001.02a7.6642,7.6642,0,0,1,1.389-1.138l.031-.018a.25759.25759,0,0,1,.133-.037.25349.25349,0,0,1,.214.116l.001.001a.25128.25128,0,0,1-.079.343l-.001.001a7.05018,7.05018,0,0,0-2.901,3.655l-.015.049a.25568.25568,0,0,1-.24.168h-1.492a.24762.24762,0,0,0-.244.244v2.956a.24369.24369,0,0,0,.244.244h1.255a.246.246,0,0,1,.233.17v.002l.032.088a7.08794,7.08794,0,0,0,2.556,3.936l.016.012a.2505.2505,0,0,1,.1.2h0Z"></path>
+    <path d="M24.06135,20.2674a.25223.25223,0,0,1-.252-.252h0v-2.268a.252.252,0,0,1,.504,0v2.268a.25223.25223,0,0,1-.252.252Z"></path>
+    <path class="a9c2db43-f2d9-4bbc-ac33-246c7298240d" d="M20.29735,19.2114h0a.25205.25205,0,0,1-.252-.248h0v-.004a4.33733,4.33733,0,0,0-3.619-4.277l-.025-.003a.24976.24976,0,0,1,.042-.496.21907.21907,0,0,1,.044.004h-.002a4.84356,4.84356,0,0,1,4.064,4.774v.002h0a.25205.25205,0,0,1-.252.248Z"></path>
+    <path class="1c6466cb-cba2-414a-9fb9-f1318c9b5541" d="M21.91735,5.46741h-.02a3.704,3.704,0,1,0,3.704,3.704h0v-.004a3.69956,3.69956,0,0,0-3.683-3.7Zm.764,3.06-.196.524h-1.176v.36h1.092l-.168.52h-.852c.124.544.4.824.8.824h.019a1.05959,1.05959,0,0,0,.706-.269l-.001.001.312.684a1.93018,1.93018,0,0,1-1.149.376h-.003c-.8,0-1.388-.58-1.576-1.6h-.324v-.52h.272v-.36h-.264v-.54h.304c.164-1.116.752-1.716,1.6-1.716.018-.001.039-.001.06-.001a1.59243,1.59243,0,0,1,1.112.45h0l-.292.684a1.036,1.036,0,0,0-.77-.34h-.03c-.4,0-.72.284-.836.924Z"></path>
+    <path d="M12.54535,16.69941a.74.74,0,1,1-.74-.74A.7396.7396,0,0,1,12.54535,16.69941Z"></path>
+  </g>
+</svg></mat-icon><div fxlayout="column" fxlayoutgap="15px" fxlayoutgap.xs="10px" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: center flex-start; align-items: center;"><h2 class="ea6-component-additional-product-card-title" style="margin-bottom: 15px;">VOTRE RETRAITE SE PREPARE AUJOURD’HUI</h2><div class="ea6-component-additional-product-card-description" style="margin-bottom: 15px;"><!----><span class="ng-star-inserted"> Déterminez votre besoin de revenu à la retraite et mettez en place un plan d’action personnalisé. </span></div><div class="ea6-component-additional-product-card-description"><!----></div></div></div><!----><a color="primary" mat-raised-button="" rel="noopener" class="mat-raised-button mat-primary ng-star-inserted" href="/def_int_ep/ep/menu.do?dfAT=menu&amp;dfMenuId=SC_EP_AV_AMPLUS" target="_blank" tabindex="0" aria-disabled="false"><span class="mat-button-wrapper"><p>Préparez votre retraite</p></span><div class="mat-button-ripple mat-ripple" matripple=""></div><div class="mat-button-focus-overlay"></div></a><!----></mat-card-content></mat-card></app-additional-product-card><!----><app-additional-product-card class="ng-star-inserted" style="flex: 1 1 100%; box-sizing: border-box; max-width: 33.3333%;"><!----><mat-card class="mat-card ea6-component-additional-product-card ng-star-inserted" fxlayoutalign="start stretch" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: stretch flex-start; align-items: stretch; max-width: 100%;"><mat-card-content class="mat-card-content" fxflex="auto" fxlayoutalign="space-between center" fxlayoutgap="10px" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: center space-between; align-items: center; flex: 1 1 auto;"><div fxlayoutalign="space-between center" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: center space-between; align-items: center; margin-bottom: 10px;"><mat-icon class="ea6-component-additional-product-card-icon mat-icon mat-icon-no-color" role="img" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.99726 32.00453" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+  <defs>
+    <style>.a3b876a1-36c1-4fc6-9609-2b8a8a8f7639{fill:#581d74;}.b7eba48c-85c4-42a8-b4c1-819e08916a14{fill:#00aac7;}
+     </style>
+  </defs>
+  <title>_set pictos contour non vecto_tracetailleOK_g_plansdetravail</title>
+  <g id="70f76608-0e63-4f11-b590-5ce09f97bc51" data-name="icon-pictoNIEset-pictos-contour-non-vecto tracetailleOK f decomposé Plan-de-travail-1-copie-87">
+    <path d="M11.504,26.58982h-.002a1.4584,1.4584,0,0,1-1.042-.436l-4.644-4.644a1.4751,1.4751,0,0,1,0-2.092h0l2.24-2.248a1.51167,1.51167,0,0,1,2.112,0h0l4.628,4.652a1.48478,1.48478,0,0,1,0,2.092h0l-2.228,2.24a1.46247,1.46247,0,0,1-1.043.436h-.021Zm-.688-.8a.98384.98384,0,0,0,1.384-.001h0l2.24-2.22a.97536.97536,0,0,0,0-1.384h0l-4.644-4.656a.99511.99511,0,0,0-1.384,0h0l-2.244,2.24a.985.985,0,0,0,0,1.4h0Z"></path>
+    <path class="a3b876a1-36c1-4fc6-9609-2b8a8a8f7639" d="M13.076,22.85382a1.072,1.072,0,1,1-1.072-1.072A1.07206,1.07206,0,0,1,13.076,22.85382Z"></path>
+    <path d="M17.164,18.44582a.25212.25212,0,0,1-.001-.5h4.045c.08,0,.52-.06.52-.768s-.508-.756-.564-.756H17.768a6.06116,6.06116,0,0,1-2.028-.996,3.96266,3.96266,0,0,0-3.088.224c-.36.248-1.6,1.384-2.188,1.948a.24866.24866,0,0,1-.352,0h0a.25108.25108,0,0,1,0-.356h0c.072-.068,1.768-1.664,2.252-2a4.44047,4.44047,0,0,1,3.624-.24,10.67978,10.67978,0,0,0,1.707.893l.073.027h3.384a1.12,1.12,0,0,1,1.087,1.12,1.1902,1.1902,0,0,1-.008.134v-.005a1.114,1.114,0,0,1-1.02,1.268Z"></path>
+    <path d="M14.496,21.84182l-.352-.352.596-.6c.228-.228,1.172-.276,4.4-.24h.952c1.128,0,3.384-1.812,4.54-2.952.16-.156.32-.312.48-.46,1.124-1.08,1.788-1.768,1.304-2.296a.82241.82241,0,0,0-.585-.32h-.003a1.78386,1.78386,0,0,0-1.112.644c-.8.8-2.868,2.904-2.868,2.904l-.356-.352s2.056-2.092,2.872-2.904a2.2139,2.2139,0,0,1,1.466-.799l.01-.001a1.29838,1.29838,0,0,1,.942.478l.002.002c.84.916-.212,1.928-1.328,2.996l-.472.456c-1.08,1.088-3.5,3.124-4.888,3.124H19.14a29.13666,29.13666,0,0,0-4.072.116Z"></path>
+    <path class="b7eba48c-85c4-42a8-b4c1-819e08916a14" d="M22.568,13.63782a4.15564,4.15564,0,0,1-2.546.864H20c-1.808,0-3.024-1.2-3.36-3.276h-.572a.15165.15165,0,0,1-.148-.148v-.56a.14767.14767,0,0,1,.148-.148h.5v-.628h-.5a.14767.14767,0,0,1-.148-.148h0v-.572a.14767.14767,0,0,1,.148-.148h.544c.308-2.16,1.54-3.392,3.396-3.392a3.58683,3.58683,0,0,1,2.501,1.013l-.001-.001a.141.141,0,0,1,.053.11.13892.13892,0,0,1-.017.067v-.001l-.324.66a.152.152,0,0,1-.103.08h-.001a.13566.13566,0,0,1-.029.003.1545.1545,0,0,1-.103-.039h0a2.86265,2.86265,0,0,0-1.912-.8h-.004c-1.228,0-2.032.8-2.28,2.308h3.491a.14815.14815,0,0,1,.124.067v.001a.15676.15676,0,0,1,.018.072.15274.15274,0,0,1-.019.073v-.001l-.272.572a.15772.15772,0,0,1-.138.084h-3.29v.628h2.9a.152.152,0,0,1,.124.064h0a.16014.16014,0,0,1,.016.07.15493.15493,0,0,1-.017.071v-.001l-.24.56a.1485.1485,0,0,1-.136.092H17.797c.276,1.428,1.048,2.18,2.244,2.18h.022a3.12961,3.12961,0,0,0,1.984-.705l-.006.005a.14594.14594,0,0,1,.092-.031.15269.15269,0,0,1,.135.082v.001l.336.696a.14613.14613,0,0,1,.012.06.15413.15413,0,0,1-.052.116h.004Z"></path>
+  </g>
+</svg></mat-icon><div fxlayout="column" fxlayoutgap="15px" fxlayoutgap.xs="10px" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: center flex-start; align-items: center;"><h2 class="ea6-component-additional-product-card-title" style="margin-bottom: 15px;">BESOIN DE FINANCER UN PROJET ?</h2><div class="ea6-component-additional-product-card-description" style="margin-bottom: 15px;"><!----><span class="ng-star-inserted"> Découvrez l’offre Prêt Personnel de Natixis Financement </span></div><div class="ea6-component-additional-product-card-description"><!----><span class="ng-star-inserted"> Un crédit vous engage et doit être remboursé. Vérifiez vos capacité de remboursement avant de vous engager. </span></div></div></div><!----><a color="primary" mat-raised-button="" rel="noopener" class="mat-raised-button mat-primary ng-star-inserted" href="/def_int_ep/ep/menu.do?dfAT=menu&amp;dfMenuId=SC_EP_CREDIT" target="_self" tabindex="0" aria-disabled="false"><span class="mat-button-wrapper"><p>En savoir plus</p></span><div class="mat-button-ripple mat-ripple" matripple=""></div><div class="mat-button-focus-overlay"></div></a><!----></mat-card-content></mat-card></app-additional-product-card></div><!----></div></div><div class="f85-page-dashboard-teasing-content" fxlayout="column" fxlayoutalign="start stretch" style="flex-direction: column; box-sizing: border-box; display: flex; place-content: stretch flex-start; align-items: stretch; max-width: 100%;"><!----><div fxlayout="row" fxlayoutalign="center center" fxlayoutgap="5px" class="ng-star-inserted" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center; align-items: center;"><h1 class="f85-page-dashboard-teasings-title-1" translate="page.dashboard.teasing.title-1" style="margin-right: 5px;">Vos</h1><h1 class="f85-page-dashboard-teasings-title-2" translate="page.dashboard.teasing.title-2">actualités</h1></div><div class="f85-page-dashboard-teasings" fxlayout="row wrap" fxlayout.xs="column" fxlayoutalign="center stretch" fxlayoutalign.xs="start stretch" fxlayoutgap="20px" style="flex-flow: row wrap; box-sizing: border-box; display: flex; place-content: stretch center; align-items: stretch; max-height: 100%;"><!----><!----><app-layer class="f85-page-dashboard-teasing ng-star-inserted" style="flex: 1 1 100%; box-sizing: border-box; max-width: 30%; margin-right: 20px;"><div class="wysiwyg classic f85-page-dashboard-teasing-container">
+ <a href="https://www.interepargne.natixis.com/nie/epargnants/placements-financiers-quelles-opportunites-en-2019-rpf87_660658.html" target="_blank"> <img class="f85-page-dashboard-teasing-container-img" src="https://epargnants.interepargne.natixis.fr/gl/img/illustration/perpectives_2019.jpg" alt=""> </a>
+ <div class="f85-page-dashboard-teasing-container-content">
+  <p class="ea6-theme-p-bold"><strong>Placements financiers, quelles opportunités en 2019 ?</strong></p>
+  <p class="ea6-theme-p2">Enjeux économiques et regards croisés de nos experts.</p>
+  <a class="f85-page-dashboard-teasing-container-content-link" href="https://www.interepargne.natixis.com/nie/epargnants/placements-financiers-quelles-opportunites-en-2019-rpf87_660658.html" target="_blank"> <span>En savoir plus</span></a>
+ </div>
+</div></app-layer><!----><app-layer class="f85-page-dashboard-teasing ng-star-inserted" style="flex: 1 1 100%; box-sizing: border-box; max-width: 30%; margin-right: 20px;"><div class="wysiwyg classic f85-page-dashboard-teasing-container">
+ <a href="https://www.interepargne.natixis.com/nie/epargnants/epargne-salariale-/-assurance-vie-lpf87_660756.html" target="_blank"> <img class="f85-page-dashboard-teasing-container-img" src="https://epargnants.interepargne.natixis.fr/gl/img/illustration/visuel_ES_AV.jpg" alt=""> </a>
+ <div class="f85-page-dashboard-teasing-container-content">
+  <p class="ea6-theme-p-bold"><strong>Epargne salariale / Assurance vie</strong></p>
+  <p class="ea6-theme-p2">L’épargne salariale tire son épingle du jeu !</p>
+  <a class="f85-page-dashboard-teasing-container-content-link" href="https://www.interepargne.natixis.com/nie/epargnants/epargne-salariale-/-assurance-vie-lpf87_660756.html" target="_blank"> <span>En savoir plus</span></a>
+ </div>
+</div></app-layer><!----><app-layer class="f85-page-dashboard-teasing ng-star-inserted" style="flex: 1 1 100%; box-sizing: border-box; max-width: 30%;"><div class="wysiwyg classic f85-page-dashboard-teasing-container">
+ <a href="https://www.interepargne.natixis.com/nie/epargnants/l-epargne-salariale-en-bref/l-epargne-salariale-en-video-jbm_659485.html" target="_blank"> <img class="f85-page-dashboard-teasing-container-img" src="https://epargnants.interepargne.natixis.fr/gl/img/illustration/marco_polo_size.jpg" alt=""> </a>
+ <div class="f85-page-dashboard-teasing-container-content">
+  <p class="ea6-theme-p-bold"><strong>L’épargne salariale en vidéo</strong></p>
+  <p class="ea6-theme-p2">Découvrez de façon ludique et pédagogique tous les avantages de l’épargne salariale.</p>
+  <a class="f85-page-dashboard-teasing-container-content-link" href="https://www.interepargne.natixis.com/nie/epargnants/l-epargne-salariale-en-bref/l-epargne-salariale-en-video-jbm_659485.html" target="_blank"> <span>En savoir plus</span></a>
+ </div>
+</div></app-layer></div></div></div></app-dashboard-page><app-tour-wrapper><tour-step-template _nghost-c0=""><mat-menu _ngcontent-c0="" class=""><!----></mat-menu><!----></tour-step-template></app-tour-wrapper></div></app-root>
+
+
+	</section>
+</section>
+
+<section class="bootstrap-angular">
+
+
+
+	
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+	if(EP.cobrowse) {
+		EP.cobrowse.helpVars = {showAVI: true, showTempoz: false, showChat: true, sContextualisation: 'NC;ABD;INT;PEE;PERCO;RSP;PEE+PERCO;INT+RSP;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;VCB;VV;VVC;VV;VVP;VV;VVS;VV;FG;FG', numPort: '0628659164'};
+	}
+</script>
+
+
+
+<form name="AcFormChat" method="post" action="/def_int_ep/ep/ac/chat.do" class="forms" id="EpChatForm" target="">
+	<input type="hidden" name="dfAT" value="actionTypeHere">
+	<input type="hidden" name="dfMenuId" value="-1">
+	<input type="hidden" name="cmd" value="">
+	<input type="hidden" name="message" value="">
+	<input type="hidden" name="epargnant" value="">
+
+	<div class="modal" id="modalChat" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-toggle="modal" data-target=".bs-example-modal-sm">
+						<span aria-hidden="true">×</span>
+					</button>
+					<h4 class="modal-title" style="text-align: center">
+						<img src="/def_int_ep/assets/img/chat/chat.png">
+						Chat
+					</h4>
+				</div>
+				<div class="modal-body">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12">
+								<div>
+									<div id="transcript" name="transcript" class="transcript text-left"></div>
+								</div>
+								<div class="typing">
+									<textarea id="typing" class="text-typing" rows="5" cols="80" wrap="on" readonly=""></textarea>
+								</div>
+								<div>
+									<textarea id="messages" name="messages" style="resize: none; width: 100%;" onkeypress="javascript:EP.NeedInfo.Chat.messageOnKeypress(event);"></textarea>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default goModalSimuAbd" onclick="javascript:EP.NeedInfo.Chat.send();" id="button-envoyer">
+										Envoyer
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+				
+		</div>
+			
+	</div>
+	
+	<div id="modal-sm" class="bs-example-modal-sm modal fade" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"><i class="fa fa-remove"></i></span>
+					</button>
+
+				</div>
+				<div class="modal-body">
+					Vous êtes sur le point d'interrompre la conversation avec le conseiller. 
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-grey" data-dismiss="modal">
+						Non
+					</button>
+					<a class="btn btn-default" href="#" onclick="javascript:EP.NeedInfo.Chat.disconnect()"> <span>Oui</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+		
+		<div id="binfo">
+			<div class="canvas-container ">
+				<div class="open-close-container">
+					<div class="button-help open-close" id="needInfoButton" onclick="javascript:EP.NeedInfo.Menu.openMenu(true, false, true, 'NC;ABD;INT;PEE;PERCO;RSP;PEE+PERCO;INT+RSP;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;CCB;VCB;VV;VVC;VV;VVP;VV;VVS;VV;FG;FG', '0628659164');" data-toggle="tooltip" data-placement="left" title="" data-original-title="Besoin d'infos">
+					</div>
+
+					<div class="mobile-close-button" onclick="javascript:EP.NeedInfo.Menu.mobileClose();">
+						<h2>X FERMER</h2>
+					</div>
+
+				</div>
+
+				<div class="canvas-box" id="canvas-box">
+					<div class="panel-group" id="accordion-needinfo" role="tablist" aria-multiselectable="true">
+
+							
+						
+						<div class="panel panel-default panel-bi">
+							<a id="a1" class="collapsed a-collapsed" data-toggle="collapse" data-parent="#accordion-needinfo" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								<i class="fa fa-chevron-down fa-bi-down"></i>
+								<div class="panel-heading active-panel" role="tab" id="headingOne">
+									<h2 class="panel-title">
+										Votre assistant	virtuel
+									</h2>
+								</div>
+							</a>
+							<div id="collapseOne" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne">
+								<div class="panel-body div-avi" id="dviAvi"></div>
+							</div>
+						</div>
+						
+
+							
+						
+
+							
+						
+						<div class="panel panel-default panel-bi" id="open-chat">
+							<a class="collapsed a-collapsed" data-toggle="collapse" data-parent="#accordion-needinfo" aria-expanded="false" href="#collapseThree" onclick="javascript:EP.NeedInfo.Chat.verifierChat();">
+								<i class="fa fa-chevron-right fa-bi-right"></i>
+								<div class="panel-heading" role="tab" id="headingThree">
+									<h2 class="panel-title">
+										Chat
+									</h2>
+								</div>
+							</a>
+							<div id="collapseThree" class="panel-collapse collapse box" role="tabpanel" aria-labelledby="headingThree" style="text-align: center;   margin-bottom: 0px">
+								<h6 id="chat_non_dispo">Chat actuellement indisponible </h6>
+								<h6 id="chat_dispo" style="display: none;">Pour contacter un conseiller par Chat, veuillez cliquez sur le bouton ci-dessous:</h6>
+								
+									<button type="button" class="btn btn-default" onclick="javascript:EP.NeedInfo.Chat.connect();" id="button-chat" disabled="false">
+										Je démarre un chat
+									</button>
+								
+							</div>
+						</div>
+						
+						<div class="panel panel-default panel-bi">
+							<a class="collapsed a-collapsed" href="#" onclick="javascript:return EP.Navigation.DfmenuAction(document.forms.AcFormChat, 'EC_EP_AC_NOUS_CON');" aria-expanded="false" aria-controls="collapseFour">
+								<div class="panel-heading" role="tab" id="headingFour">
+									<h2 class="panel-title">
+										Nous contacter
+									</h2>
+								</div>
+							</a>
+							<div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer-nie">
+	<div class="social">
+		<div class="fa fa-linkedin custom-tooltip" onclick="window.open('https://www.linkedin.com/showcase/natixis-interepargne/')">
+			<span class="custom-tooltip-text">
+				Retrouvez Natixis Interépargne sur
+				Linkedin
+			</span>
+		</div>
+		<div class="fa fa-twitter custom-tooltip" onclick="window.open('https://twitter.com/NatixisIE')">
+			<span class="custom-tooltip-text">
+				Retrouvez Natixis Interépargne sur
+				Twitter
+			</span>
+		</div>
+		<div class="fa fa-youtube-play custom-tooltip" onclick="window.open('https://www.youtube.com/user/natixisinterepargne')">
+			<span class="custom-tooltip-text">
+				Retrouvez Natixis Interépargne sur
+				Youtube
+			</span>
+		</div>
+		<ul>
+			<li>
+				<a href="javascript:EP.Modal.loadPageForPopup('/def_int_ep/ep/menu.do?dfMenuId=SC_EP_GL_INFSECU', null, 720, 525, null, 'Sécurité');">
+					Sécurité
+				</a>
+			</li>
+			
+			<li>
+				<a href="menu.do?dfAT=menu&amp;dfMenuId=SC_EP_GP_DOC">
+					Tarification
+				</a>
+			</li>
+			
+			<li>
+				<a href="menu.do?dfMenuId=SC_EP_PP_LEG" target="_blank" title="Mentions légales" onclick="javascript:EP.Stats.sendClickTag('mentions legales','navigation');">
+					Mentions légales
+				</a>
+			</li>
+			<li>
+				<a href="menu.do?dfMenuId=SC_EP_PP_CGU" target="_blank" title="Conditions générales">
+					Conditions générales
+				</a>
+			</li>
+			
+		</ul>
+	</div>
+
+	<hr>
+	<div class="bottom-footer">
+		<div class="img-container">
+			<img src="/def_int_ep/assets/img/logo/Logo_BPCE.png" alt="BPCE-logo">
+		</div>
+		<span>©Natixis 2019</span>
+	</div>
+
+</footer>
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script>
+		//nom jsp
+		EP.Stats.pageName="/ep/angular/body-angular.jsp"; 
+		EP.Stats.init("logc233", "logs1233", "xiti.com", "536488");
+		EP.Stats.sendPageTag("/ep/angular/body-angular.jsp", "fr");
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" id="popupModalBootstrap" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="layer-5 modal-content">
+			<div class="modal-header">
+				<h2 class="modal-title" id="popupModalBootstrapTitle"></h2>
+				<button type="button" class="close allowed-to-proceed" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true" class="material-icons">close</span>
+				</button>
+			</div>
+			<div class="modal-body" id="popupModalBootstrapBody">
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<script>
+	$(document).ready(function() {
+		EP.User.Session.init(660000 );
+	});
+</script>
+<div id="modal-expiration-session" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content layer-5">
+			<div class="modal-header">
+				<h4 class="modal-title expiration-session-already">Vous avez été déconnecté</h4>
+				
+					
+				
+			</div>
+			<div class="modal-body py-2 row align-items-center">
+				<div class="col-4 col-sm-2">
+					<img src="/def_int_ep/assets/img/pictonatixis/chrono.svg" class="img-fluid" alt="">
+				</div>
+				<div class="col-8 col-sm-10">
+					<p class="p1 expiration-session-already">
+						Votre session a expiré.
+					</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary allowed-to-proceed expiration-session-already" onclick="location.href='/def_int_ep/ep/home.do';">
+					Se reconnecter
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+	</section>
+	
+	<script src="/front/runtime.js"></script>
+	<script src="/front/polyfills.js"></script>
+	<script src="/front/main.js"></script>
+
+
+
+
+</body></html>
