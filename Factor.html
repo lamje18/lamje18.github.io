@@ -420,25 +420,25 @@ lsjQuery("#layerslider_1").layerSlider({sliderVersion: '6.7.6', responsiveUnder:
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://cunning-badger-81419-dev-ed.my.salesforce.com',
-			'https://testnatixis-developer-edition.eu12.force.com/liveAgentSetupFlow',
+			'https://brave-shark-l1mhv7-dev-ed.my.salesforce.com',
+			'https://testliveagentjp-developer-edition.eu19.force.com/liveAgentSetupFlow',
 			gslbBaseURL,
-			'00D1r000002CaNN',
-			'Support',
+			'00D1i000000VGTU',
+			'Agent_de_1er_niveau',
 			{
-				baseLiveAgentContentURL: 'https://c.la1-c2-par.salesforceliveagent.com/content',
-				deploymentId: '5721r000000H0zA',
-				buttonId: '5731r000000PSyd',
-				baseLiveAgentURL: 'https://d.la1-c2-par.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'Support',
-				isOfflineSupportEnabled: true
+				baseLiveAgentContentURL: 'https://c.la1-c2-cdg.salesforceliveagent.com/content',
+				deploymentId: '5721i000000XelF',
+				buttonId: '5731i000000br80',
+				baseLiveAgentURL: 'https://d.la1-c2-cdg.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'Agent_de_1er_niveau',
+				isOfflineSupportEnabled: false
 			}
 		);
 	};
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://cunning-badger-81419-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://brave-shark-l1mhv7-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
