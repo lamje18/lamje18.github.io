@@ -472,7 +472,76 @@ var wpcf7 = {"apiSettings":{"root":"https:\/\/www.factor.bpce.fr\/wp-json\/conta
 
 </script>
 
+<style type='text/css'>
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #5F6367;
+		font-family: "Salesforce Sans", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #5F6367;
+	}
+	@font-face {
+		font-family: 'Salesforce Sans';
+		src: url('https://www.sfdcstatic.com/system/shared/common/assets/fonts/SalesforceSans/SalesforceSans-Regular.woff') format('woff'),
+		url('https://www.sfdcstatic.com/system/shared/common/assets/fonts/SalesforceSans/SalesforceSans-Regular.ttf') format('truetype');
+	}
+</style>
+
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script type='text/javascript'>
+	var initESW = function(gslbBaseURL) {
+		embedded_svc.settings.displayHelpButton = true; //Or false
+		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+
+		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
+		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
+
+		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
+		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+
+		// Settings for Live Agent
+		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+			// Returns a valid button ID.
+		//};
+		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
+		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+
+		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+		embedded_svc.settings.entryFeature = 'LiveAgent';
+
+		embedded_svc.init(
+			'https://ntx-lab--Full.cs80.my.salesforce.com',
+			'https://full-natixissandbox.cs80.force.com/liveagenttest',
+			gslbBaseURL,
+			'00D250000008baX',
+			'Agent_chat',
+			{
+				baseLiveAgentContentURL: 'https://c.la1-c1cs-lo3.salesforceliveagent.com/content',
+				deploymentId: '57225000000CaVT',
+				buttonId: '57325000000CaZB',
+				baseLiveAgentURL: 'https://d.la1-c1cs-lo3.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'Agent_chat',
+				isOfflineSupportEnabled: true
+			}
+		);
+	};
+
+	if (!window.embedded_svc) {
+		var s = document.createElement('script');
+		s.setAttribute('src', 'https://ntx-lab--Full.cs80.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.onload = function() {
+			initESW(null);
+		};
+		document.body.appendChild(s);
+	} else {
+		initESW('https://service.force.com');
+	}
+</script>
 
 
-
-<div class="mobile-sticky-header-overlay"></div><div id="phantom" class="masthead classic-header center bg-behind-menu widgets shadow-decoration small-mobile-menu-icon mobile-menu-icon-bg-on show-device-logo show-mobile-logo show-phantom" style="visibility: hidden;"><div class="ph-wrap with-logo"><div class="logo-box"><a href="https://www.factor.bpce.fr/"><img class=" preload-me" src="https://www.factor.bpce.fr/wp-content/uploads/2019/03/logo-BPCE-Factor_mobile.png" srcset="https://www.factor.bpce.fr/wp-content/uploads/2019/03/logo-BPCE-Factor_mobile.png 155w, https://www.factor.bpce.fr/wp-content/uploads/2019/03/logo-BPCE-Factor_mobile.png 155w" width="155" height="48" sizes="155px" alt="BPCE Factor"> </a></div><div class="menu-box"><ul id="primary-menu" class="main-nav level-arrows-on outside-item-remove-margin" role="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-957 current_page_item menu-item-989 act first"><a href="https://www.factor.bpce.fr/" data-level="1"><span class="menu-item-text"><span class="menu-text">Accueil</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1004"><a href="https://www.factor.bpce.fr/solutions-tresorerie/" data-level="1"><span class="menu-item-text"><span class="menu-text">Nos solutions</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1005"><a href="https://www.factor.bpce.fr/lentreprise/" data-level="1"><span class="menu-item-text"><span class="menu-text">L’entreprise</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2728"><a href="https://www.factor.bpce.fr/blog-affacturage/" data-level="1"><span class="menu-item-text"><span class="menu-text">Parlons affacturage</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003"><a href="https://www.factor.bpce.fr/deja-client/" data-level="1"><span class="menu-item-text"><span class="menu-text">Déjà client</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1318"><a href="https://www.factor.bpce.fr/contacts/" data-level="1"><span class="menu-item-text"><span class="menu-text">Rencontrez-nous</span></span></a></li> </ul></div><div class="widget-box"><div class="mini-widgets"><div class="soc-ico show-on-desktop in-menu-first-switch in-menu-second-switch custom-bg disabled-border border-off hover-accent-bg hover-disabled-border hover-border-off first last"><a title="LinkedIn" href="https://www.linkedin.com/company/bpce-factor/" target="_blank" class="linkedin"><span class="soc-font-icon"></span><span class="screen-reader-text">LinkedIn</span></a><a title="Twitter" href="https://twitter.com/BPCE_Factor" target="_blank" class="twitter"><span class="soc-font-icon"></span><span class="screen-reader-text">Twitter</span></a><a title="YouTube" href="https://www.youtube.com/channel/UCfSE84K4w0ulYYGcgFGeqOg" target="_blank" class="you-tube"><span class="soc-font-icon"></span><span class="screen-reader-text">YouTube</span></a></div></div></div></div></div><div class="iso-preloader dt-posts-preload dt-posts-preload-active" style="display: none;"><div class="dt-posts-preload-activity"></div></div><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="https://vars.hotjar.com/box-d743cafc9d1fb7eed204caa92025802f.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe></body></html>
+<div class="mobile-sticky-header-overlay"></div><div id="phantom" class="masthead classic-header center bg-behind-menu widgets shadow-decoration small-mobile-menu-icon mobile-menu-icon-bg-on show-device-logo show-mobile-logo show-phantom" style="visibility: hidden;"><div class="ph-wrap with-logo"><div class="logo-box"><a href="https://www.factor.bpce.fr/"><img class=" preload-me" src="https://www.factor.bpce.fr/wp-content/uploads/2019/03/logo-BPCE-Factor_mobile.png" srcset="https://www.factor.bpce.fr/wp-content/uploads/2019/03/logo-BPCE-Factor_mobile.png 155w, https://www.factor.bpce.fr/wp-content/uploads/2019/03/logo-BPCE-Factor_mobile.png 155w" width="155" height="48" sizes="155px" alt="BPCE Factor"> </a></div><div class="menu-box"><ul id="primary-menu" class="main-nav level-arrows-on outside-item-remove-margin" role="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-957 current_page_item menu-item-989 act first"><a href="https://www.factor.bpce.fr/" data-level="1"><span class="menu-item-text"><span class="menu-text">Accueil</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1004"><a href="https://www.factor.bpce.fr/solutions-tresorerie/" data-level="1"><span class="menu-item-text"><span class="menu-text">Nos solutions</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1005"><a href="https://www.factor.bpce.fr/lentreprise/" data-level="1"><span class="menu-item-text"><span class="menu-text">L’entreprise</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2728"><a href="https://www.factor.bpce.fr/blog-affacturage/" data-level="1"><span class="menu-item-text"><span class="menu-text">Parlons affacturage</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003"><a href="https://www.factor.bpce.fr/deja-client/" data-level="1"><span class="menu-item-text"><span class="menu-text">Déjà client</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1318"><a href="https://www.factor.bpce.fr/contacts/" data-level="1"><span class="menu-item-text"><span class="menu-text">Rencontrez-nous</span></span></a></li> </ul></div><div class="widget-box"><div class="mini-widgets"><div class="soc-ico show-on-desktop in-menu-first-switch in-menu-second-switch custom-bg disabled-border border-off hover-accent-bg hover-disabled-border hover-border-off first last"><a title="LinkedIn" href="https://www.linkedin.com/company/bpce-factor/" target="_blank" class="linkedin"><span class="soc-font-icon"></span><span class="screen-reader-text">LinkedIn</span></a><a title="Twitter" href="https://twitter.com/BPCE_Factor" target="_blank" class="twitter"><span class="soc-font-icon"></span><span class="screen-reader-text">Twitter</span></a><a title="YouTube" href="https://www.youtube.com/channel/UCfSE84K4w0ulYYGcgFGeqOg" target="_blank" class="you-tube"><span class="soc-font-icon"></span><span class="screen-reader-text">YouTube</span></a></div></div></div></div></div><div class="iso-preloader dt-posts-preload dt-posts-preload-active" style="display: none;"><div class="dt-posts-preload-activity"></div></div><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="https://vars.hotjar.com/box-d743cafc9d1fb7eed204caa92025802f.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe>
+		
+		</body>
+		</html>
