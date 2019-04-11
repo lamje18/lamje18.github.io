@@ -1,0 +1,612 @@
+<html lang="fr-FR" class="js supports no-touchevents no-forcetouch cssanimations no-cssgridlegacy cssgrid cssfilters csstransforms csstransforms3d csstransitions mobile-false js_active vc_desktop vc_transform vc_transform not-iOS" style=""><!--<![endif]--><head>
+	<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	    <meta name="theme-color" content="#d1d1d1">	<link rel="profile" href="http://gmpg.org/xfn/11">
+            <div class="fit-vids-style" id="fit-vids-style" style="display: none;">&shy;<style>.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></div><script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script type="text/javascript">
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                var originalAddEventListener = EventTarget.prototype.addEventListener,
+                    oldWidth = window.innerWidth;
+
+                EventTarget.prototype.addEventListener = function (eventName, eventHandler, useCapture) {
+                    if (eventName === "resize") {
+                        originalAddEventListener.call(this, eventName, function (event) {
+                            if (oldWidth === window.innerWidth) {
+                                return;
+                            }
+                            else if (oldWidth !== window.innerWidth) {
+                                oldWidth = window.innerWidth;
+                            }
+                            if (eventHandler.handleEvent) {
+                                eventHandler.handleEvent.call(this, event);
+                            }
+                            else {
+                                eventHandler.call(this, event);
+                            };
+                        }, useCapture);
+                    }
+                    else {
+                        originalAddEventListener.call(this, eventName, eventHandler, useCapture);
+                    };
+                };
+            };
+        </script>
+		<title>BPCE Factor I Parlons affacturage</title>
+<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="BPCE Factor » Flux" href="https://www.factor.bpce.fr/feed/">
+<link rel="alternate" type="application/rss+xml" title="BPCE Factor » Flux des commentaires" href="https://www.factor.bpce.fr/comments/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.factor.bpce.fr\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="https://www.factor.bpce.fr/wp-includes/js/wp-emoji-release.min.js?ver=5.1.1" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="layerslider-css" href="https://www.factor.bpce.fr/wp-content/plugins/LayerSlider/static/layerslider/css/layerslider.css?ver=6.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="ls-google-fonts-css" href="https://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900%7COpen+Sans:300%7CIndie+Flower:regular%7COswald:300,regular,700&amp;subset=latin%2Clatin-ext" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="https://www.factor.bpce.fr/wp-includes/css/dist/block-library/style.min.css?ver=5.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-theme-css" href="https://www.factor.bpce.fr/wp-includes/css/dist/block-library/theme.min.css?ver=5.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="https://www.factor.bpce.fr/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="tp_twitter_plugin_css-css" href="https://www.factor.bpce.fr/wp-content/plugins/recent-tweets-widget/tp_twitter_plugin.css?ver=1.0" type="text/css" media="screen">
+<link rel="stylesheet" id="rs-plugin-settings-css" href="https://www.factor.bpce.fr/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.4.8.3" type="text/css" media="all">
+<style id="rs-plugin-settings-inline-css" type="text/css">
+#rs-demo-id {}
+</style>
+<link rel="stylesheet" id="style-css-css" href="https://www.factor.bpce.fr/wp-content/themes/dt-the7/style.css?ver=5.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="child-style-css" href="https://www.factor.bpce.fr/wp-content/themes/dt-the7-child/style.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="the7-Defaults-css" href="https://www.factor.bpce.fr/wp-content/uploads/smile_fonts/Defaults/Defaults.css?ver=5.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="js_composer_front-css" href="https://www.factor.bpce.fr/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=5.7" type="text/css" media="all">
+<link rel="stylesheet" id="dt-web-fonts-css" href="//fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C500%2C600%2C700%7COpen+Sans%3A400%2C600%2C700&amp;ver=7.5.0.2" type="text/css" media="all">
+<link rel="stylesheet" id="dt-main-css" href="https://www.factor.bpce.fr/wp-content/themes/dt-the7/css/main.min.css?ver=7.5.0.2" type="text/css" media="all">
+<style id="dt-main-inline-css" type="text/css">
+body #load {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 9901;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all .35s ease-out;
+  transition: all .35s ease-out;
+}
+.load-wrap {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.load-wrap > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+#load {
+  background-color: #ffffff;
+}
+.uil-default rect:not(.bk) {
+  fill: #333333;
+}
+.uil-ring > path {
+  fill: #333333;
+}
+.ring-loader .circle {
+  fill: #333333;
+}
+.ring-loader .moving-circle {
+  fill: #333333;
+}
+.uil-hourglass .glass {
+  stroke: #333333;
+}
+.uil-hourglass .sand {
+  fill: #333333;
+}
+.spinner-loader .load-wrap {
+  background-image: url("data:image/svg+xml,%3Csvg width='75px' height='75px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid' class='uil-default'%3E%3Crect x='0' y='0' width='100' height='100' fill='none' class='bk'%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23333333' transform='rotate(0 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23333333' transform='rotate(30 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.08333333333333333s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23333333' transform='rotate(60 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.16666666666666666s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23333333' transform='rotate(90 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.25s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23333333' transform='rotate(120 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.3333333333333333s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23333333' transform='rotate(150 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.4166666666666667s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23333333' transform='rotate(180 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23333333' transform='rotate(210 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.5833333333333334s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23333333' transform='rotate(240 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.6666666666666666s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23333333' transform='rotate(270 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.75s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23333333' transform='rotate(300 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.8333333333333334s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23333333' transform='rotate(330 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.9166666666666666s' repeatCount='indefinite'/%3E%3C/rect%3E%3C/svg%3E");
+}
+.ring-loader .load-wrap {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='72' height='72' fill='%23333333'%3E   %3Cpath opacity='.25' d='M16 0 A16 16 0 0 0 16 32 A16 16 0 0 0 16 0 M16 4 A12 12 0 0 1 16 28 A12 12 0 0 1 16 4'/%3E   %3Cpath d='M16 0 A16 16 0 0 1 32 16 L28 16 A12 12 0 0 0 16 4z'%3E     %3CanimateTransform attributeName='transform' type='rotate' from='0 16 16' to='360 16 16' dur='0.8s' repeatCount='indefinite' /%3E   %3C/path%3E %3C/svg%3E");
+}
+.hourglass-loader .load-wrap {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='72' height='72' fill='%23333333'%3E   %3Cpath transform='translate(2)' d='M0 12 V20 H4 V12z'%3E      %3Canimate attributeName='d' values='M0 12 V20 H4 V12z; M0 4 V28 H4 V4z; M0 12 V20 H4 V12z; M0 12 V20 H4 V12z' dur='1.2s' repeatCount='indefinite' begin='0' keytimes='0;.2;.5;1' keySplines='0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8' calcMode='spline'  /%3E   %3C/path%3E   %3Cpath transform='translate(8)' d='M0 12 V20 H4 V12z'%3E     %3Canimate attributeName='d' values='M0 12 V20 H4 V12z; M0 4 V28 H4 V4z; M0 12 V20 H4 V12z; M0 12 V20 H4 V12z' dur='1.2s' repeatCount='indefinite' begin='0.2' keytimes='0;.2;.5;1' keySplines='0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8' calcMode='spline'  /%3E   %3C/path%3E   %3Cpath transform='translate(14)' d='M0 12 V20 H4 V12z'%3E     %3Canimate attributeName='d' values='M0 12 V20 H4 V12z; M0 4 V28 H4 V4z; M0 12 V20 H4 V12z; M0 12 V20 H4 V12z' dur='1.2s' repeatCount='indefinite' begin='0.4' keytimes='0;.2;.5;1' keySplines='0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8' calcMode='spline' /%3E   %3C/path%3E   %3Cpath transform='translate(20)' d='M0 12 V20 H4 V12z'%3E     %3Canimate attributeName='d' values='M0 12 V20 H4 V12z; M0 4 V28 H4 V4z; M0 12 V20 H4 V12z; M0 12 V20 H4 V12z' dur='1.2s' repeatCount='indefinite' begin='0.6' keytimes='0;.2;.5;1' keySplines='0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8' calcMode='spline' /%3E   %3C/path%3E   %3Cpath transform='translate(26)' d='M0 12 V20 H4 V12z'%3E     %3Canimate attributeName='d' values='M0 12 V20 H4 V12z; M0 4 V28 H4 V4z; M0 12 V20 H4 V12z; M0 12 V20 H4 V12z' dur='1.2s' repeatCount='indefinite' begin='0.8' keytimes='0;.2;.5;1' keySplines='0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8' calcMode='spline' /%3E   %3C/path%3E %3C/svg%3E");
+}
+
+</style>
+<link rel="stylesheet" id="dt-awsome-fonts-back-css" href="https://www.factor.bpce.fr/wp-content/themes/dt-the7/fonts/FontAwesome/back-compat.min.css?ver=7.5.0.2" type="text/css" media="all">
+<link rel="stylesheet" id="dt-awsome-fonts-css" href="https://www.factor.bpce.fr/wp-content/themes/dt-the7/fonts/FontAwesome/css/all.min.css?ver=7.5.0.2" type="text/css" media="all">
+<link rel="stylesheet" id="dt-fontello-css" href="https://www.factor.bpce.fr/wp-content/themes/dt-the7/fonts/fontello/css/fontello.min.css?ver=7.5.0.2" type="text/css" media="all">
+<link rel="stylesheet" id="the7pt-static-css" href="https://www.factor.bpce.fr/wp-content/plugins/dt-the7-core/assets/css/post-type.min.css?ver=7.5.0.2" type="text/css" media="all">
+<link rel="stylesheet" id="dt-custom-css" href="https://www.factor.bpce.fr/wp-content/uploads/the7-css/custom.css?ver=acae946b75de" type="text/css" media="all">
+<link rel="stylesheet" id="dt-media-css" href="https://www.factor.bpce.fr/wp-content/uploads/the7-css/media.css?ver=acae946b75de" type="text/css" media="all">
+<link rel="stylesheet" id="the7pt.less-css" href="https://www.factor.bpce.fr/wp-content/uploads/the7-css/post-type-dynamic.css?ver=acae946b75de" type="text/css" media="all">
+<link rel="stylesheet" id="style-css" href="https://www.factor.bpce.fr/wp-content/themes/dt-the7-child/style.css?ver=7.5.0.2" type="text/css" media="all">
+<link rel="stylesheet" id="ultimate-google-fonts-css" href="https://fonts.googleapis.com/css?family=Roboto:regular,500" type="text/css" media="all">
+<link rel="stylesheet" id="ultimate-style-min-css" href="https://www.factor.bpce.fr/wp-content/plugins/Ultimate_VC_Addons/assets/min-css/ultimate.min.css?ver=3.18.0" type="text/css" media="all">
+<link rel="stylesheet" id="__EPYT__style-css" href="https://www.factor.bpce.fr/wp-content/plugins/youtube-embed-plus/styles/ytprefs.min.css?ver=13.1" type="text/css" media="all">
+<style id="__EPYT__style-inline-css" type="text/css">
+
+                .epyt-gallery-thumb {
+                        width: 33.333%;
+                }
+                
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js?ver=3.1.1"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-3.0.0.min.js?ver=3.0.0"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var LS_Meta = {"v":"6.8.2"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-content/plugins/LayerSlider/static/layerslider/js/greensock.js?ver=1.19.0"></script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-content/plugins/LayerSlider/static/layerslider/js/layerslider.kreaturamedia.jquery.js?ver=6.8.2"></script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-content/plugins/LayerSlider/static/layerslider/js/layerslider.transitions.js?ver=6.8.2"></script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.4.8.3"></script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.4.8.3"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var dtLocal = {"themeUrl":"https:\/\/www.factor.bpce.fr\/wp-content\/themes\/dt-the7","passText":"Pour voir ce contenu, entrer le mots de passe:","moreButtonText":{"loading":"Chargement...","loadMore":"Charger la suite"},"postID":"2280","ajaxurl":"https:\/\/www.factor.bpce.fr\/wp-admin\/admin-ajax.php","contactMessages":{"required":"One or more fields have an error. Please check and try again.","terms":"Please accept the privacy policy."},"ajaxNonce":"ed2c1bbded","pageData":{"type":"page","template":"page","layout":null},"themeSettings":{"smoothScroll":"off","lazyLoading":false,"accentColor":{"mode":"solid","color":"#d1d1d1"},"desktopHeader":{"height":180},"floatingHeader":{"showAfter":94,"showMenu":true,"height":60,"logo":{"showLogo":true,"html":"<img class=\" preload-me\" src=\"https:\/\/www.factor.bpce.fr\/wp-content\/uploads\/2019\/03\/logo-BPCE-Factor_mobile.png\" srcset=\"https:\/\/www.factor.bpce.fr\/wp-content\/uploads\/2019\/03\/logo-BPCE-Factor_mobile.png 155w, https:\/\/www.factor.bpce.fr\/wp-content\/uploads\/2019\/03\/logo-BPCE-Factor_mobile.png 155w\" width=\"155\" height=\"48\"   sizes=\"155px\" alt=\"BPCE Factor\" \/>","url":"https:\/\/www.factor.bpce.fr\/"}},"mobileHeader":{"firstSwitchPoint":990,"secondSwitchPoint":778,"firstSwitchPointHeight":50,"secondSwitchPointHeight":10},"stickyMobileHeaderFirstSwitch":{"logo":{"html":"<img class=\" preload-me\" src=\"https:\/\/www.factor.bpce.fr\/wp-content\/uploads\/2019\/03\/logo-BPCE-Factor_mobile.png\" srcset=\"https:\/\/www.factor.bpce.fr\/wp-content\/uploads\/2019\/03\/logo-BPCE-Factor_mobile.png 155w, https:\/\/www.factor.bpce.fr\/wp-content\/uploads\/2019\/03\/logo-BPCE-Factor_mobile.png 155w\" width=\"155\" height=\"48\"   sizes=\"155px\" alt=\"BPCE Factor\" \/>"}},"stickyMobileHeaderSecondSwitch":{"logo":{"html":"<img class=\" preload-me\" src=\"https:\/\/www.factor.bpce.fr\/wp-content\/uploads\/2019\/03\/logo-BPCE-Factor_mobile.png\" srcset=\"https:\/\/www.factor.bpce.fr\/wp-content\/uploads\/2019\/03\/logo-BPCE-Factor_mobile.png 155w, https:\/\/www.factor.bpce.fr\/wp-content\/uploads\/2019\/03\/logo-BPCE-Factor_mobile.png 155w\" width=\"155\" height=\"48\"   sizes=\"155px\" alt=\"BPCE Factor\" \/>"}},"content":{"textColor":"#0c0000","headerColor":"#581d74"},"sidebar":{"switchPoint":990},"boxedWidth":"1340px","stripes":{"stripe1":{"textColor":"#787d85","headerColor":"#3b3f4a"},"stripe2":{"textColor":"#8b9199","headerColor":"#ffffff"},"stripe3":{"textColor":"#ffffff","headerColor":"#ffffff"}}},"VCMobileScreenWidth":"768"};
+var dtShare = {"shareButtonText":{"facebook":"Share on Facebook","twitter":"Tweet","pinterest":"Pin it","linkedin":"Share on Linkedin","whatsapp":"Share on Whatsapp","google":"Share on Google Plus"},"overlayOpacity":"85"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-content/themes/dt-the7/js/above-the-fold.min.js?ver=7.5.0.2"></script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4"></script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-content/plugins/Ultimate_VC_Addons/assets/min-js/ultimate.min.js?ver=3.18.0"></script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-content/plugins/Ultimate_VC_Addons/assets/min-js/ultimate_bg.min.js?ver=5.1.1"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _EPYT_ = {"ajaxurl":"https:\/\/www.factor.bpce.fr\/wp-admin\/admin-ajax.php","security":"273e72f111","gallery_scrolloffset":"20","eppathtoscripts":"https:\/\/www.factor.bpce.fr\/wp-content\/plugins\/youtube-embed-plus\/scripts\/","eppath":"https:\/\/www.factor.bpce.fr\/wp-content\/plugins\/youtube-embed-plus\/","epresponsiveselector":"[\"iframe[src*='youtube.com']\",\"iframe[src*='youtube-nocookie.com']\",\"iframe[data-ep-src*='youtube.com']\",\"iframe[data-ep-src*='youtube-nocookie.com']\",\"iframe[data-ep-gallerysrc*='youtube.com']\"]","epdovol":"1","version":"13.1","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com\/embed\/\"], iframe[src*=\"youtube-nocookie.com\/embed\/\"]","ajax_compat":"","ytapi_load":"light","stopMobileBuffer":"1","vi_active":"","vi_js_posttypes":[]};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-content/plugins/youtube-embed-plus/scripts/ytprefs.min.js?ver=13.1"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js?ver=5.1.1"></script>
+<meta name="generator" content="Powered by LayerSlider 6.8.2 - Multi-Purpose, Responsive, Parallax, Mobile-Friendly Slider Plugin for WordPress.">
+<!-- LayerSlider updates and docs at: https://layerslider.kreaturamedia.com -->
+<link rel="https://api.w.org/" href="https://www.factor.bpce.fr/wp-json/">
+<meta name="generator" content="WordPress 5.1.1">
+<link rel="canonical" href="https://www.factor.bpce.fr/blog-affacturage/">
+<link rel="shortlink" href="https://www.factor.bpce.fr/?p=2280">
+<link rel="alternate" type="application/json+oembed" href="https://www.factor.bpce.fr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.factor.bpce.fr%2Fblog-affacturage%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.factor.bpce.fr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.factor.bpce.fr%2Fblog-affacturage%2F&amp;format=xml">
+<!-- Hotjar Tracking Code for http://nf.pluzix.fr/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:667992,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script><script async="" src="https://static.hotjar.com/c/hotjar-667992.js?sv=6"></script><meta property="og:site_name" content="BPCE Factor">
+<meta property="og:title" content="Parlons affacturage">
+<meta property="og:url" content="https://www.factor.bpce.fr/blog-affacturage/">
+<meta property="og:type" content="article">
+<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://www.factor.bpce.fr/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><meta name="generator" content="Powered by Slider Revolution 5.4.8.3 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) { 
+	var load = document.getElementById("load");
+	
+	var removeLoading = setTimeout(function() {
+		load.className += " loader-removed";
+	}, 500);
+});
+</script>
+<meta name="twitter:card" content="summary"><meta name="twitter:site" content="@natixis_factor"><meta name="twitter:domain" content="BPCE Factor"><meta name="twitter:description" content="Tout savoir sur l'affacturage en quelques clics."><meta name="twitter:title" content="BPCE Factor I Parlons affacturage"><meta property="og:site_name" content="BPCE Factor"><meta property="og:description" content="Tout savoir sur l'affacturage en quelques clics."><meta property="og:url" content="https://www.factor.bpce.fr/blog-affacturage/"><meta property="og:type" content="article"><meta property="og:title" content="BPCE Factor I Parlons affacturage"><meta name="description" content="Tout savoir sur l'affacturage en quelques clics."><meta name="keywords" content="affacturage; financement ; factures clients ; délais de paiement ; avance trésorerie ; créances ; banque populaire ; caisse d'épargne ; BPCE ; gestion administrative ; règlement ; natixis ; bpce factor ; factor ; TPE ; PME"><meta name="title" content="BPCE Factor I Parlons affacturage"><link rel="icon" href="https://www.factor.bpce.fr/wp-content/uploads/2019/04/100-100-logo-bpce-factor.png" sizes="32x32">
+<link rel="icon" href="https://www.factor.bpce.fr/wp-content/uploads/2019/04/100-100-logo-bpce-factor.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://www.factor.bpce.fr/wp-content/uploads/2019/04/100-100-logo-bpce-factor.png">
+<meta name="msapplication-TileImage" content="https://www.factor.bpce.fr/wp-content/uploads/2019/04/100-100-logo-bpce-factor.png">
+
+<!-- BEGIN WPMSGA v4.0.4 Classic Tracking
+                         - https://wordpress.org/plugins/wp-meta-seo/ -->
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-30567583-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        if ('https:' === document.location.protocol) {
+            ga.src = 'https://ssl.google-analytics.com/ga.js';
+        } else {
+            ga.src = 'http://www.google-analytics.com/ga.js';
+        }
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+<!-- END WPMSGA Classic Tracking -->
+
+<script type="text/javascript">function setREVStartSize(e){									
+						try{ e.c=jQuery(e.c);var i=jQuery(window).width(),t=9999,r=0,n=0,l=0,f=0,s=0,h=0;
+							if(e.responsiveLevels&&(jQuery.each(e.responsiveLevels,function(e,f){f>i&&(t=r=f,l=e),i>f&&f>r&&(r=f,n=e)}),t>r&&(l=n)),f=e.gridheight[l]||e.gridheight[0]||e.gridheight,s=e.gridwidth[l]||e.gridwidth[0]||e.gridwidth,h=i/s,h=h>1?1:h,f=Math.round(h*f),"fullscreen"==e.sliderLayout){var u=(e.c.width(),jQuery(window).height());if(void 0!=e.fullScreenOffsetContainer){var c=e.fullScreenOffsetContainer.split(",");if (c) jQuery.each(c,function(e,i){u=jQuery(i).length>0?u-jQuery(i).outerHeight(!0):u}),e.fullScreenOffset.split("%").length>1&&void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0?u-=jQuery(window).height()*parseInt(e.fullScreenOffset,0)/100:void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0&&(u-=parseInt(e.fullScreenOffset,0))}f=u}else void 0!=e.minHeight&&f<e.minHeight&&(f=e.minHeight);e.c.closest(".rev_slider_wrapper").css({height:f})					
+						}catch(d){console.log("Failure at Presize of Slider:"+d)}						
+					};</script>
+<noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><style>/** Ultimate: Media Responsive **/ @media (max-width: 1199px) { }@media (max-width: 991px)  { }@media (max-width: 767px)  { }@media (max-width: 479px)  { }/** Ultimate: Media Responsive - **/</style><script async="" src="https://script.hotjar.com/modules.87d78982b257eb784657.js"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><style>
+/** Ultimate: CountDown Responsive **/ 
+@media (min-width: 1824px) { 
+}
+@media (max-width: 1199px) { 
+}
+@media (max-width: 991px)  { 
+}
+@media (max-width: 767px)  { 
+}
+@media (max-width: 479px)  { 
+}
+/** Ultimate: Tooltipster Responsive - **/</style></head>
+<body class="page-template-default page page-id-2280 wp-embed-responsive the7-core-ver-2.0.0.1 dt-responsive-on srcset-enabled btn-flat custom-btn-color custom-btn-hover-color phantom-fade phantom-shadow-decoration phantom-custom-logo-on sticky-mobile-header top-header first-switch-logo-right first-switch-menu-left second-switch-logo-left second-switch-menu-right right-mobile-menu layzr-loading-on popup-message-style dt-fa-compatibility the7-ver-7.5.0.2 wpb-js-composer js-comp-ver-5.7 vc_responsive no-mobile closed-overlay-mobile-header">
+<!-- The7 7.5.0.2 -->
+<div id="load" class="ring-loader loader-removed">
+	<div class="load-wrap"></div>
+</div>
+<div id="page" class="closed-mobile-header">
+	<a class="skip-link screen-reader-text" href="#content">Contenu en pleine largeur</a>
+
+<div class="mobile-header-space"></div><div class="masthead classic-header center bg-behind-menu widgets shadow-decoration small-mobile-menu-icon mobile-menu-icon-bg-on show-device-logo show-mobile-logo" role="banner">
+
+	<div class="brand-bar-top"></div>
+    <div class="brand-bar-bottom"></div>
+    
+	<div class="top-bar full-width-line top-bar-empty">
+	<div class="top-bar-bg"></div>
+	<div class="mini-widgets left-widgets"></div><div class="mini-widgets right-widgets"></div></div>
+
+	<header class="header-bar">
+
+		<div class="branding">
+	<div id="site-title" class="assistive-text">BPCE Factor</div>
+	<div id="site-description" class="assistive-text">Partenaire de votre développement</div>
+	<a class="" href="https://www.factor.bpce.fr/"><img class=" preload-me" src="https://www.factor.bpce.fr/wp-content/uploads/2019/03/logo-BPCE-Factor-site.png" srcset="https://www.factor.bpce.fr/wp-content/uploads/2019/03/logo-BPCE-Factor-site.png 250w" width="250" height="100" sizes="250px" alt="BPCE Factor"><img class="mobile-logo preload-me" src="https://www.factor.bpce.fr/wp-content/uploads/2019/03/logo-BPCE-Factor_mobile.png" srcset="https://www.factor.bpce.fr/wp-content/uploads/2019/03/logo-BPCE-Factor_mobile.png 155w, https://www.factor.bpce.fr/wp-content/uploads/2019/03/logo-BPCE-Factor_mobile.png 155w" width="155" height="48" sizes="155px" alt="BPCE Factor"></a><div class="mini-widgets"></div><div class="mini-widgets"></div></div>
+
+		<nav class="navigation">
+
+			<ul id="primary-menu" class="main-nav level-arrows-on outside-item-remove-margin" role="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-989 first"><a href="https://www.factor.bpce.fr/" data-level="1"><span class="menu-item-text"><span class="menu-text">Accueil</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1004"><a href="https://www.factor.bpce.fr/solutions-tresorerie/" data-level="1"><span class="menu-item-text"><span class="menu-text">Nos solutions</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1005"><a href="https://www.factor.bpce.fr/lentreprise/" data-level="1"><span class="menu-item-text"><span class="menu-text">L’entreprise</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2280 current_page_item menu-item-2728 act"><a href="https://www.factor.bpce.fr/blog-affacturage/" data-level="1"><span class="menu-item-text"><span class="menu-text">Parlons affacturage</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003"><a href="https://www.factor.bpce.fr/deja-client/" data-level="1"><span class="menu-item-text"><span class="menu-text">Déjà client</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1318"><a href="https://www.factor.bpce.fr/contacts/" data-level="1"><span class="menu-item-text"><span class="menu-text">Rencontrez-nous</span></span></a></li> </ul>
+			<div class="mini-widgets"><div class="soc-ico show-on-desktop in-menu-first-switch in-menu-second-switch custom-bg disabled-border border-off hover-accent-bg hover-disabled-border hover-border-off first last"><a title="LinkedIn" href="https://www.linkedin.com/company/bpce-factor/" target="_blank" class="linkedin"><span class="soc-font-icon"></span><span class="screen-reader-text">LinkedIn</span></a><a title="Twitter" href="https://twitter.com/BPCE_Factor" target="_blank" class="twitter"><span class="soc-font-icon"></span><span class="screen-reader-text">Twitter</span></a><a title="YouTube" href="https://www.youtube.com/channel/UCfSE84K4w0ulYYGcgFGeqOg" target="_blank" class="you-tube"><span class="soc-font-icon"></span><span class="screen-reader-text">YouTube</span></a></div></div>
+		</nav>
+
+	</header>
+
+<div class="mobile-header-bar"><div class="mobile-navigation"><a href="#" class="dt-mobile-menu-icon"><span class="lines"></span></a></div><div class="mobile-mini-widgets"></div><div class="mobile-branding"><a class="" href="https://www.factor.bpce.fr/"><img class=" preload-me" src="https://www.factor.bpce.fr/wp-content/uploads/2019/03/logo-BPCE-Factor-site.png" srcset="https://www.factor.bpce.fr/wp-content/uploads/2019/03/logo-BPCE-Factor-site.png 250w" width="250" height="100" sizes="250px" alt="BPCE Factor"><img class="mobile-logo preload-me" src="https://www.factor.bpce.fr/wp-content/uploads/2019/03/logo-BPCE-Factor_mobile.png" srcset="https://www.factor.bpce.fr/wp-content/uploads/2019/03/logo-BPCE-Factor_mobile.png 155w, https://www.factor.bpce.fr/wp-content/uploads/2019/03/logo-BPCE-Factor_mobile.png 155w" width="155" height="48" sizes="155px" alt="BPCE Factor"></a></div></div></div><div class="dt-close-mobile-menu-icon"><span></span></div>
+<div class="dt-mobile-header"><div class="mobile-header-scrollbar-wrap mCustomScrollbar _mCS_1"><div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0"><div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+	<ul id="mobile-menu" class="mobile-main-nav" role="menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-989 first"><a href="https://www.factor.bpce.fr/" data-level="1"><span class="menu-item-text"><span class="menu-text">Accueil</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1004"><a href="https://www.factor.bpce.fr/solutions-tresorerie/" data-level="1"><span class="menu-item-text"><span class="menu-text">Nos solutions</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1005"><a href="https://www.factor.bpce.fr/lentreprise/" data-level="1"><span class="menu-item-text"><span class="menu-text">L’entreprise</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2280 current_page_item menu-item-2728 act"><a href="https://www.factor.bpce.fr/blog-affacturage/" data-level="1"><span class="menu-item-text"><span class="menu-text">Parlons affacturage</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003"><a href="https://www.factor.bpce.fr/deja-client/" data-level="1"><span class="menu-item-text"><span class="menu-text">Déjà client</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1318"><a href="https://www.factor.bpce.fr/contacts/" data-level="1"><span class="menu-item-text"><span class="menu-text">Rencontrez-nous</span></span></a></li> 	</ul>
+	<div class="mobile-mini-widgets-in-menu"><div class="soc-ico show-on-desktop in-menu-first-switch in-menu-second-switch custom-bg disabled-border border-off hover-accent-bg hover-disabled-border hover-border-off first last hide-on-desktop hide-on-second-switch show-on-first-switch"><a title="LinkedIn" href="https://www.linkedin.com/company/bpce-factor/" target="_blank" class="linkedin"><span class="soc-font-icon"></span><span class="screen-reader-text">LinkedIn</span></a><a title="Twitter" href="https://twitter.com/BPCE_Factor" target="_blank" class="twitter"><span class="soc-font-icon"></span><span class="screen-reader-text">Twitter</span></a><a title="YouTube" href="https://www.youtube.com/channel/UCfSE84K4w0ulYYGcgFGeqOg" target="_blank" class="you-tube"><span class="soc-font-icon"></span><span class="screen-reader-text">YouTube</span></a></div><div class="soc-ico show-on-desktop in-menu-first-switch in-menu-second-switch custom-bg disabled-border border-off hover-accent-bg hover-disabled-border hover-border-off first last hide-on-desktop hide-on-first-switch show-on-second-switch"><a title="LinkedIn" href="https://www.linkedin.com/company/bpce-factor/" target="_blank" class="linkedin"><span class="soc-font-icon"></span><span class="screen-reader-text">LinkedIn</span></a><a title="Twitter" href="https://twitter.com/BPCE_Factor" target="_blank" class="twitter"><span class="soc-font-icon"></span><span class="screen-reader-text">Twitter</span></a><a title="YouTube" href="https://www.youtube.com/channel/UCfSE84K4w0ulYYGcgFGeqOg" target="_blank" class="you-tube"><span class="soc-font-icon"></span><span class="screen-reader-text">YouTube</span></a></div></div>
+</div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div></div>
+
+
+
+<div id="main" class="sidebar-right sidebar-divider-vertical">
+
+	
+    <div class="main-gradient"></div>
+    <div class="wf-wrap">
+    <div class="wf-container-main">
+
+	
+
+
+    <div id="content" class="content" role="main">
+
+		<div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div id="ultimate-heading-95085caf314fe7852" class="uvc-heading ult-adjust-bottom-margin ultimate-heading-95085caf314fe7852 uvc-8393 " data-hspacer="no_spacer" data-halign="center" style="text-align:center"><div class="uvc-heading-spacer no_spacer" style="top"></div><div class="uvc-main-heading ult-responsive" data-ultimate-target=".uvc-heading.ultimate-heading-95085caf314fe7852 h1" data-responsive-json-new="{&quot;font-size&quot;:&quot;&quot;,&quot;line-height&quot;:&quot;&quot;}"><h1 style="font-family:'Roboto';font-weight:500;color:#581d74;margin-top:-40px;">Parlons affacturage</h1></div></div><div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+<div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-tabs vc_tta-color-grey vc_tta-style-classic vc_tta-shape-rounded vc_tta-spacing-1 vc_tta-tabs-position-top vc_tta-controls-align-left"><div class="vc_tta-tabs-container"><ul class="vc_tta-tabs-list"><li class="vc_tta-tab vc_active" data-vc-tab=""><a href="#1552471453908-f138cd25-b05c" data-vc-tabs="" data-vc-container=".vc_tta"><span class="vc_tta-title-text">Notre actualité</span></a></li><li class="vc_tta-tab" data-vc-tab=""><a href="#1552471453927-ad0eaffd-ad3a" data-vc-tabs="" data-vc-container=".vc_tta"><span class="vc_tta-title-text">Nos articles</span></a></li></ul></div><div class="vc_tta-panels-container"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1552471453908-f138cd25-b05c" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1552471453908-f138cd25-b05c" data-vc-accordion="" data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Notre actualité</span></a></h4></div><div class="vc_tta-panel-body"><!-- vc_grid start -->
+<div class="vc_grid-container-wrapper vc_clearfix">
+	<div class="vc_grid-container vc_clearfix wpb_content_element vc_basic_grid" data-initial-loading-animation="fadeIn" data-vc-grid-settings="{&quot;page_id&quot;:2280,&quot;style&quot;:&quot;lazy&quot;,&quot;action&quot;:&quot;vc_get_vc_grid_data&quot;,&quot;shortcode_id&quot;:&quot;1552473008394-8731bf15-6258-3&quot;,&quot;items_per_page&quot;:&quot;10&quot;,&quot;tag&quot;:&quot;vc_basic_grid&quot;}" data-vc-request="https://www.factor.bpce.fr/wp-admin/admin-ajax.php" data-vc-post-id="2280" data-vc-public-nonce="ff69f75366"><style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1419240516480{background-color: #f9f9f9 !important;}</style><style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="supsystic-for-all-admin-pps-css" href="https://www.factor.bpce.fr/wp-content/plugins/popup-by-supsystic/css/supsystic-for-all-admin.css?ver=1.9.46" type="text/css" media="all">
+<link rel="stylesheet" id="dashicons-css" href="https://www.factor.bpce.fr/wp-includes/css/dashicons.min.css?ver=5.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="wp-jquery-ui-dialog-css" href="https://www.factor.bpce.fr/wp-includes/css/jquery-ui-dialog.min.css?ver=5.1.1" type="text/css" media="all">
+<div class="vc_grid vc_row vc_grid-gutter-25px vc_pageable-wrapper vc_hook_hover" data-vc-pageable-content="true"><div class="vc_pageable-slide-wrapper vc_clearfix" data-vc-grid-content="true"><div class="vc_grid-item vc_clearfix vc_col-sm-6 vc_grid-item-zone-c-bottom vc_grid_filter-item vc_visible-item fadeIn animated"><div class="vc_grid-item-mini vc_clearfix"><div class="vc_gitem-animated-block "><div class="vc_gitem-zone vc_gitem-zone-a vc-gitem-zone-height-mode-auto vc-gitem-zone-height-mode-auto-1-1 vc_gitem-is-link" style="background-image: url('https://www.factor.bpce.fr/wp-content/uploads/2019/01/AdobeStock_206137697-1024x470.jpeg') !important;">
+	<a href="https://www.factor.bpce.fr/bpce-factor-propose-instant-payment-aux-clients-banque-populaire-et-caisse-depargne-pour-financer-leurs-creances/" title="BPCE Factor propose l’Instant Payment aux clients Banque Populaire et Caisse d’Epargne" class="vc_gitem-link vc-zone-link"></a>	<img src="https://www.factor.bpce.fr/wp-content/uploads/2019/01/AdobeStock_206137697-1024x470.jpeg" class="vc_gitem-zone-img" alt="instant payment bpce factor">	<div class="vc_gitem-zone-mini">
+			</div>
+</div>
+</div>
+<div class="vc_gitem-zone vc_gitem-zone-c vc_custom_1419240516480">
+	<div class="vc_gitem-zone-mini">
+		<div class="vc_gitem_row vc_row vc_gitem-row-position-top"><div class="vc_col-sm-12 vc_gitem-col vc_gitem-col-align-"><div class="vc_custom_heading vc_gitem-post-data vc_gitem-post-data-source-post_title"><h4 style="text-align: left">BPCE Factor propose l’Instant Payment aux clients Banque Populaire et Caisse d’Epargne</h4></div>	<div class="vc_btn3-container vc_btn3-center">
+		<a style="background-color:#581d74; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-xs vc_btn3-shape-rounded vc_btn3-style-custom" a="" href="https://www.factor.bpce.fr/bpce-factor-propose-instant-payment-aux-clients-banque-populaire-et-caisse-depargne-pour-financer-leurs-creances/" title="Lire plus">Lire plus</a></div>
+
+
+
+</div></div>	</div>
+</div>
+</div><div class="vc_clearfix"></div></div><div class="vc_grid-item vc_clearfix vc_col-sm-6 vc_grid-item-zone-c-bottom vc_grid_filter-item vc_visible-item fadeIn animated"><div class="vc_grid-item-mini vc_clearfix"><div class="vc_gitem-animated-block "><div class="vc_gitem-zone vc_gitem-zone-a vc-gitem-zone-height-mode-auto vc-gitem-zone-height-mode-auto-1-1 vc_gitem-is-link" style="background-image: url('https://www.factor.bpce.fr/wp-content/uploads/2018/01/03_498363880-1024x683.jpg') !important;">
+	<a href="https://www.factor.bpce.fr/evolution-produits-btp/" title="BPCE Factor fait évoluer ses solutions dédiées au BTP" class="vc_gitem-link vc-zone-link"></a>	<img src="https://www.factor.bpce.fr/wp-content/uploads/2018/01/03_498363880-1024x683.jpg" class="vc_gitem-zone-img" alt="BTP bpce factor situ">	<div class="vc_gitem-zone-mini">
+			</div>
+</div>
+</div>
+<div class="vc_gitem-zone vc_gitem-zone-c vc_custom_1419240516480">
+	<div class="vc_gitem-zone-mini">
+		<div class="vc_gitem_row vc_row vc_gitem-row-position-top"><div class="vc_col-sm-12 vc_gitem-col vc_gitem-col-align-"><div class="vc_custom_heading vc_gitem-post-data vc_gitem-post-data-source-post_title"><h4 style="text-align: left">BPCE Factor fait évoluer ses solutions dédiées au BTP</h4></div>	<div class="vc_btn3-container vc_btn3-center">
+		<a style="background-color:#581d74; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-xs vc_btn3-shape-rounded vc_btn3-style-custom" a="" href="https://www.factor.bpce.fr/evolution-produits-btp/" title="Lire plus">Lire plus</a></div>
+
+
+
+</div></div>	</div>
+</div>
+</div><div class="vc_clearfix"></div></div></div><div data-lazy-loading-btn="true" style="display: none;"><a href="https://www.factor.bpce.fr/tpe-un-glossaire-affacturage-dedie/"></a></div></div></div>
+</div><!-- vc_grid end -->
+</div></div><div class="vc_tta-panel" id="1552471453927-ad0eaffd-ad3a" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1552471453927-ad0eaffd-ad3a" data-vc-accordion="" data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Nos articles</span></a></h4></div><div class="vc_tta-panel-body"><!-- vc_grid start -->
+<div class="vc_grid-container-wrapper vc_clearfix">
+	<div class="vc_grid-container vc_clearfix wpb_content_element vc_basic_grid" data-initial-loading-animation="fadeIn" data-vc-grid-settings="{&quot;page_id&quot;:2280,&quot;style&quot;:&quot;lazy&quot;,&quot;action&quot;:&quot;vc_get_vc_grid_data&quot;,&quot;shortcode_id&quot;:&quot;1552473008397-bbb0b70a-b8e1-10&quot;,&quot;items_per_page&quot;:&quot;10&quot;,&quot;tag&quot;:&quot;vc_basic_grid&quot;}" data-vc-request="https://www.factor.bpce.fr/wp-admin/admin-ajax.php" data-vc-post-id="2280" data-vc-public-nonce="ff69f75366"><style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1419240516480{background-color: #f9f9f9 !important;}</style><style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="supsystic-for-all-admin-pps-css" href="https://www.factor.bpce.fr/wp-content/plugins/popup-by-supsystic/css/supsystic-for-all-admin.css?ver=1.9.46" type="text/css" media="all">
+<link rel="stylesheet" id="dashicons-css" href="https://www.factor.bpce.fr/wp-includes/css/dashicons.min.css?ver=5.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="wp-jquery-ui-dialog-css" href="https://www.factor.bpce.fr/wp-includes/css/jquery-ui-dialog.min.css?ver=5.1.1" type="text/css" media="all">
+<div class="vc_grid vc_row vc_grid-gutter-25px vc_pageable-wrapper vc_hook_hover" data-vc-pageable-content="true"><div class="vc_pageable-slide-wrapper vc_clearfix" data-vc-grid-content="true"><div class="vc_grid-item vc_clearfix vc_col-sm-6 vc_grid-item-zone-c-bottom vc_grid_filter-item vc_visible-item fadeIn animated"><div class="vc_grid-item-mini vc_clearfix "><div class="vc_gitem-animated-block "><div class="vc_gitem-zone vc_gitem-zone-a vc-gitem-zone-height-mode-auto vc-gitem-zone-height-mode-auto-1-1 vc_gitem-is-link" style="background-image: url('https://www.factor.bpce.fr/wp-content/uploads/2019/03/astuces-tresorerie.jpg') !important;">
+	<a href="https://www.factor.bpce.fr/astuces-pour-optimiser-votre-tresorerie/" title="3 astuces pour optimiser votre trésorerie" class="vc_gitem-link vc-zone-link"></a>	<img src="https://www.factor.bpce.fr/wp-content/uploads/2019/03/astuces-tresorerie.jpg" class="vc_gitem-zone-img" alt="affacturage astuces optimiser trésorerie">	<div class="vc_gitem-zone-mini">
+			</div>
+</div>
+</div>
+<div class="vc_gitem-zone vc_gitem-zone-c vc_custom_1419240516480">
+	<div class="vc_gitem-zone-mini">
+		<div class="vc_gitem_row vc_row vc_gitem-row-position-top"><div class="vc_col-sm-12 vc_gitem-col vc_gitem-col-align-"><div class="vc_custom_heading vc_gitem-post-data vc_gitem-post-data-source-post_title"><h4 style="text-align: left">3 astuces pour optimiser votre trésorerie</h4></div>	<div class="vc_btn3-container vc_btn3-center">
+		<a style="background-color:#581d74; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-xs vc_btn3-shape-rounded vc_btn3-style-custom" a="" href="https://www.factor.bpce.fr/astuces-pour-optimiser-votre-tresorerie/" title="Lire plus">Lire plus</a></div>
+
+
+
+</div></div>	</div>
+</div>
+</div><div class="vc_clearfix"></div></div><div class="vc_grid-item vc_clearfix vc_col-sm-6 vc_grid-item-zone-c-bottom vc_grid_filter-item vc_visible-item fadeIn animated"><div class="vc_grid-item-mini vc_clearfix "><div class="vc_gitem-animated-block "><div class="vc_gitem-zone vc_gitem-zone-a vc-gitem-zone-height-mode-auto vc-gitem-zone-height-mode-auto-1-1 vc_gitem-is-link" style="background-image: url('https://www.factor.bpce.fr/wp-content/uploads/2018/07/adult-beautiful-beauty-826349-1024x683.jpg') !important;">
+	<a href="https://www.factor.bpce.fr/affacturage-un-financement-approuve-par-les-chefs-entreprise/" title="L’affacturage, un financement approuvé par les chefs d’entreprise" class="vc_gitem-link vc-zone-link"></a>	<img src="https://www.factor.bpce.fr/wp-content/uploads/2018/07/adult-beautiful-beauty-826349-1024x683.jpg" class="vc_gitem-zone-img" alt="affacturage chefs entreprise">	<div class="vc_gitem-zone-mini">
+			</div>
+</div>
+</div>
+<div class="vc_gitem-zone vc_gitem-zone-c vc_custom_1419240516480">
+	<div class="vc_gitem-zone-mini">
+		<div class="vc_gitem_row vc_row vc_gitem-row-position-top"><div class="vc_col-sm-12 vc_gitem-col vc_gitem-col-align-"><div class="vc_custom_heading vc_gitem-post-data vc_gitem-post-data-source-post_title"><h4 style="text-align: left">L’affacturage, un financement approuvé par les chefs d’entreprise</h4></div>	<div class="vc_btn3-container vc_btn3-center">
+		<a style="background-color:#581d74; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-xs vc_btn3-shape-rounded vc_btn3-style-custom" a="" href="https://www.factor.bpce.fr/affacturage-un-financement-approuve-par-les-chefs-entreprise/" title="Lire plus">Lire plus</a></div>
+
+
+
+</div></div>	</div>
+</div>
+</div><div class="vc_clearfix"></div></div><div class="vc_grid-item vc_clearfix vc_col-sm-6 vc_grid-item-zone-c-bottom vc_grid_filter-item vc_visible-item fadeIn animated"><div class="vc_grid-item-mini vc_clearfix "><div class="vc_gitem-animated-block "><div class="vc_gitem-zone vc_gitem-zone-a vc-gitem-zone-height-mode-auto vc-gitem-zone-height-mode-auto-1-1 vc_gitem-is-link" style="background-image: url('https://www.factor.bpce.fr/wp-content/uploads/2018/05/rawpixel-626044-unsplash-1024x804.jpg') !important;">
+	<a href="https://www.factor.bpce.fr/definition-affacturage/" title="L’affacturage, comment ça marche au quotidien ?" class="vc_gitem-link vc-zone-link"></a>	<img src="https://www.factor.bpce.fr/wp-content/uploads/2018/05/rawpixel-626044-unsplash-1024x804.jpg" class="vc_gitem-zone-img" alt="définition affacturage">	<div class="vc_gitem-zone-mini">
+			</div>
+</div>
+</div>
+<div class="vc_gitem-zone vc_gitem-zone-c vc_custom_1419240516480">
+	<div class="vc_gitem-zone-mini">
+		<div class="vc_gitem_row vc_row vc_gitem-row-position-top"><div class="vc_col-sm-12 vc_gitem-col vc_gitem-col-align-"><div class="vc_custom_heading vc_gitem-post-data vc_gitem-post-data-source-post_title"><h4 style="text-align: left">L’affacturage, comment ça marche au quotidien ?</h4></div>	<div class="vc_btn3-container vc_btn3-center">
+		<a style="background-color:#581d74; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-xs vc_btn3-shape-rounded vc_btn3-style-custom" a="" href="https://www.factor.bpce.fr/definition-affacturage/" title="Lire plus">Lire plus</a></div>
+
+
+
+</div></div>	</div>
+</div>
+</div><div class="vc_clearfix"></div></div></div><div data-lazy-loading-btn="true" style="display: none;"><a href="https://www.factor.bpce.fr/definition-affacturage/"></a></div></div></div>
+</div><!-- vc_grid end -->
+</div></div></div></div></div></div></div></div></div></div>
+
+    </div><!-- #content -->
+
+	
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-content widget-divider-off">
+			<section id="search-2" class="widget widget_search">	<form class="searchform" role="search" method="get" action="https://www.factor.bpce.fr/">
+		<label for="search" class="screen-reader-text">Recherche</label>
+		<input type="text" class="field searchform-s" name="s" value="" placeholder="Ecrivez puis tapez entrée ...">
+		<input type="submit" class="assistive-text searchsubmit" value="Go!">
+		<a href="#go" class="submit"></a>
+	</form></section>		<section id="recent-posts-2" class="widget widget_recent_entries">		<div class="widget-title">Articles récents</div>		<ul>
+											<li>
+					<a href="https://www.factor.bpce.fr/astuces-pour-optimiser-votre-tresorerie/">3 astuces pour optimiser votre trésorerie</a>
+									</li>
+											<li>
+					<a href="https://www.factor.bpce.fr/bpce-factor-propose-instant-payment-aux-clients-banque-populaire-et-caisse-depargne-pour-financer-leurs-creances/">BPCE Factor propose l’Instant Payment aux clients Banque Populaire et Caisse d’Epargne</a>
+									</li>
+											<li>
+					<a href="https://www.factor.bpce.fr/affacturage-un-financement-approuve-par-les-chefs-entreprise/">L’affacturage, un financement approuvé par les chefs d’entreprise</a>
+									</li>
+											<li>
+					<a href="https://www.factor.bpce.fr/evolution-produits-btp/">BPCE Factor fait évoluer ses solutions dédiées au BTP</a>
+									</li>
+											<li>
+					<a href="https://www.factor.bpce.fr/definition-affacturage/">L’affacturage, comment ça marche au quotidien ?</a>
+									</li>
+					</ul>
+		</section><section id="archives-2" class="widget widget_archive"><div class="widget-title">Archives</div>		<ul>
+				<li><a href="https://www.factor.bpce.fr/2019/03/">mars 2019</a></li>
+	<li><a href="https://www.factor.bpce.fr/2019/01/">janvier 2019</a></li>
+	<li><a href="https://www.factor.bpce.fr/2018/07/">juillet 2018</a></li>
+	<li><a href="https://www.factor.bpce.fr/2018/05/">mai 2018</a></li>
+	<li><a href="https://www.factor.bpce.fr/2017/08/">août 2017</a></li>
+	<li><a href="https://www.factor.bpce.fr/2017/07/">juillet 2017</a></li>
+		</ul>
+			</section>        </div>
+    </aside><!-- #sidebar -->
+
+
+
+
+			</div><!-- .wf-container -->
+		</div><!-- .wf-wrap -->
+	</div><!-- #main -->
+
+	
+	<!-- !Footer -->
+	<footer id="footer" class="footer solid-bg empty-footer">
+
+		
+<!-- !Bottom-bar -->
+<div id="bottom-bar" class="full-width-line logo-left" role="contentinfo">
+	<div class="wf-wrap">
+		<div class="wf-container-bottom">
+			<div class="wf-table wf-mobile-collapsed">
+
+                <div class="wf-td menubas">
+
+                    <div class="mini-nav wf-float-right"><ul id="bottom-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1200 first"><a href="https://www.factor.bpce.fr/reclamations/" data-level="1"><i class="far fa-paper-plane" aria-hidden="true"></i><span class="menu-item-text"><span class="menu-text">Réclamations</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1192"><a href="https://www.factor.bpce.fr/mentions-legales/" data-level="1"><i class="fas fa-balance-scale" aria-hidden="true"></i><span class="menu-item-text"><span class="menu-text">Mentions légales</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2272"><a href="https://www.factor.bpce.fr/notice-rgpd/" data-level="1"><i class="fas fa-lock" aria-hidden="true"></i><span class="menu-item-text"><span class="menu-text">Protection des données</span></span></a></li> </ul><div class="menu-select"><select class="hasCustomSelect" style="-webkit-appearance: menulist-button; width: 148px; position: absolute; opacity: 0; height: 28px; font-size: 14px; visibility: visible;"><option selected="selected" value="">———</option><option value="https://www.factor.bpce.fr/reclamations/" data-level="1">Réclamations</option><option value="https://www.factor.bpce.fr/mentions-legales/" data-level="1">Mentions légales</option><option value="https://www.factor.bpce.fr/notice-rgpd/" data-level="1">Protection des données</option></select><span class="customSelect" style="display: inline-block;"><span class="customSelectInner" style="width: 128px; display: inline-block;">———</span></span><span class="customSelect1" style="visibility: visible;"><span class="customSelectInner">Déplier le menu</span></span></div></div>
+                </div>
+        
+				
+					<div class="wf-td menubpce">
+                            <div class="floatDivleft"><img src="/wp-content/uploads/2019/03/logo-groupe-bpce.png" border="0" alt="Groupe BPCE"></div>
+                            <div class="floatDivRight">
+							© BPCE Factor 2019                            </div>
+					</div>
+
+				
+
+
+				
+			</div>
+		</div><!-- .wf-container-bottom -->
+	</div><!-- .wf-wrap -->
+</div><!-- #bottom-bar -->
+	</footer><!-- #footer -->
+
+
+
+	<a href="#" class="scroll-top off"><span class="screen-reader-text">Haut de page</span></a>
+
+</div><!-- #page -->
+
+<link rel="stylesheet" id="vc_tta_style-css" href="https://www.factor.bpce.fr/wp-content/plugins/js_composer/assets/css/js_composer_tta.min.css?ver=5.7" type="text/css" media="all">
+<link rel="stylesheet" id="prettyphoto-css" href="https://www.factor.bpce.fr/wp-content/plugins/js_composer/assets/lib/prettyphoto/css/prettyPhoto.min.css?ver=5.7" type="text/css" media="all">
+<link rel="stylesheet" id="vc_pageable_owl-carousel-css-css" href="https://www.factor.bpce.fr/wp-content/plugins/js_composer/assets/lib/owl-carousel2-dist/assets/owl.min.css?ver=5.7" type="text/css" media="all">
+<link rel="stylesheet" id="animate-css-css" href="https://www.factor.bpce.fr/wp-content/plugins/js_composer/assets/lib/bower/animate-css/animate.min.css?ver=5.7" type="text/css" media="all">
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-content/themes/dt-the7/js/main.min.js?ver=7.5.0.2"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/www.factor.bpce.fr\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.1"></script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-content/plugins/dt-the7-core/assets/js/post-type.min.js?ver=7.5.0.2"></script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-content/plugins/youtube-embed-plus/scripts/fitvids.min.js?ver=13.1"></script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-includes/js/wp-embed.min.js?ver=5.1.1"></script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=5.7"></script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-content/plugins/js_composer/assets/lib/vc_accordion/vc-accordion.min.js?ver=5.7"></script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-content/plugins/js_composer/assets/lib/vc-tta-autoplay/vc-tta-autoplay.min.js?ver=5.7"></script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-content/plugins/js_composer/assets/lib/vc_tabs/vc-tabs.min.js?ver=5.7"></script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-content/plugins/js_composer/assets/lib/prettyphoto/js/jquery.prettyPhoto.min.js?ver=5.7"></script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-content/plugins/js_composer/assets/lib/owl-carousel2-dist/owl.carousel.min.js?ver=5.7"></script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-content/plugins/js_composer/assets/lib/bower/imagesloaded/imagesloaded.pkgd.min.js?ver=5.1.1"></script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-includes/js/underscore.min.js?ver=1.8.3"></script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-content/plugins/js_composer/assets/lib/waypoints/waypoints.min.js?ver=5.7"></script>
+<script type="text/javascript" src="https://www.factor.bpce.fr/wp-content/plugins/js_composer/assets/js/dist/vc_grid.min.js?ver=5.7"></script>
+			<script type="text/javascript">
+				jQuery.noConflict();
+				(function( $ ) {
+					$(function() {
+						// More code using $ as alias to jQuery
+						$("area[href*=\\#],a[href*=\\#]:not([href=\\#]):not([href^='\\#tab']):not([href^='\\#quicktab']):not([href^='\\#pane']):not([href^='#15'])").click(function() {
+							if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+								var target = $(this.hash);
+								target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+								if (target.length) {
+								$('html,body').animate({
+								scrollTop: target.offset().top - 20  
+								},900 ,'easeInQuint');
+								return false;
+								}
+							}
+						});
+					});
+				})(jQuery);	
+			</script>				
+				
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+ 
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+ 
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+	//<![CDATA[
+	var _gaq = _gaq || [];
+	//_gaq.push(['_setAccount','UA-30567583-1']);
+	_gaq.push(['_setAccount', gaProperty]);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	//]]>
+
+</script>
+
+
+
+
+<div class="mobile-sticky-header-overlay"></div><div id="phantom" class="masthead classic-header center bg-behind-menu widgets shadow-decoration small-mobile-menu-icon mobile-menu-icon-bg-on show-device-logo show-mobile-logo show-phantom" style=""><div class="ph-wrap with-logo"><div class="logo-box"><a href="https://www.factor.bpce.fr/"><img class=" preload-me" src="https://www.factor.bpce.fr/wp-content/uploads/2019/03/logo-BPCE-Factor_mobile.png" srcset="https://www.factor.bpce.fr/wp-content/uploads/2019/03/logo-BPCE-Factor_mobile.png 155w, https://www.factor.bpce.fr/wp-content/uploads/2019/03/logo-BPCE-Factor_mobile.png 155w" width="155" height="48" sizes="155px" alt="BPCE Factor"> </a></div><div class="menu-box"><ul id="primary-menu" class="main-nav level-arrows-on outside-item-remove-margin" role="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-989 first"><a href="https://www.factor.bpce.fr/" data-level="1"><span class="menu-item-text"><span class="menu-text">Accueil</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1004"><a href="https://www.factor.bpce.fr/solutions-tresorerie/" data-level="1"><span class="menu-item-text"><span class="menu-text">Nos solutions</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1005"><a href="https://www.factor.bpce.fr/lentreprise/" data-level="1"><span class="menu-item-text"><span class="menu-text">L’entreprise</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2280 current_page_item menu-item-2728 act"><a href="https://www.factor.bpce.fr/blog-affacturage/" data-level="1"><span class="menu-item-text"><span class="menu-text">Parlons affacturage</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003"><a href="https://www.factor.bpce.fr/deja-client/" data-level="1"><span class="menu-item-text"><span class="menu-text">Déjà client</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1318"><a href="https://www.factor.bpce.fr/contacts/" data-level="1"><span class="menu-item-text"><span class="menu-text">Rencontrez-nous</span></span></a></li> </ul></div><div class="widget-box"><div class="mini-widgets"><div class="soc-ico show-on-desktop in-menu-first-switch in-menu-second-switch custom-bg disabled-border border-off hover-accent-bg hover-disabled-border hover-border-off first last"><a title="LinkedIn" href="https://www.linkedin.com/company/bpce-factor/" target="_blank" class="linkedin"><span class="soc-font-icon"></span><span class="screen-reader-text">LinkedIn</span></a><a title="Twitter" href="https://twitter.com/BPCE_Factor" target="_blank" class="twitter"><span class="soc-font-icon"></span><span class="screen-reader-text">Twitter</span></a><a title="YouTube" href="https://www.youtube.com/channel/UCfSE84K4w0ulYYGcgFGeqOg" target="_blank" class="you-tube"><span class="soc-font-icon"></span><span class="screen-reader-text">YouTube</span></a></div></div></div></div></div><div class="iso-preloader dt-posts-preload dt-posts-preload-active" style="display: none;"><div class="dt-posts-preload-activity"></div></div><div id="ads"></div><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="https://vars.hotjar.com/box-d743cafc9d1fb7eed204caa92025802f.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe></body></html>
